@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Farming Tools Information | KrishiSetu
+    </title>
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f6f8f4;
+            color: #24352b;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+
+        .navbar {
+
+            width: 100%;
+
+            min-height: 88px;
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 0 8%;
+
+            background: #ffffff;
+
+            border-bottom: 1px solid #e7ece7;
+
+            box-shadow:
+                0 3px 15px rgba(0, 0, 0, 0.04);
+
+            gap: 28px;
+
+        }
+
+
+        .logo {
+
+            display: flex;
+
+            align-items: center;
+
+            white-space: nowrap;
+
+            font-size: 28px;
+
+            font-weight: bold;
+
+            color: #284736;
+
+        }
+
+
+        .back-home {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            white-space: nowrap;
+
+            text-decoration: none;
+
+            padding: 13px 20px;
+
+            border-radius: 15px;
+
+            background: #eef3ef;
+
+            color: #294936;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+
+        }
+
+
+        .back-home:hover {
+
+            background: #dfe9e1;
+
+            transform: translateY(-2px);
+
+        }
+
+
+        .nav-links {
+
+            margin: 0 0 0 auto;
+
+            padding: 0;
+
+            list-style: none;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 22px;
+
+        }
+
+
+        .nav-links li {
+
+            list-style: none;
+
+        }
+
+
+        .nav-links a {
+
+            text-decoration: none;
+
+            color: #34493b;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+
+        }
+
+
+        .nav-links a:hover {
+
+            color: #2f7a4b;
+
+        }
+
+
+        #darkModeBtn {
+
+            border: none;
+
+            cursor: pointer;
+
+            font-size: 18px;
+
+            background: #eef3ef;
+
+            width: 48px;
+
+            height: 48px;
+
+            border-radius: 14px;
+
+            margin-left: 12px;
+
+            transition: 0.3s;
+
+        }
+
+
+        #darkModeBtn:hover {
+
+            transform: translateY(-2px);
+
+            background: #dfe9e1;
+
+        }
+
+
+        /* =========================
+           HERO SECTION
+        ========================= */
+
+        .tools-hero {
+
+            min-height: 540px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #163d2a,
+                    #2f7a4b
+                );
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 70px 9%;
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .tools-hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 360px;
+
+            height: 360px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255, 255, 255, 0.06);
+
+            right: -100px;
+
+            top: -120px;
+
+        }
+
+
+        .tools-hero-content {
+
+            max-width: 700px;
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+
+        .tools-badge {
+
+            display: inline-block;
+
+            padding: 8px 16px;
+
+            border-radius: 50px;
+
+            background:
+                rgba(255, 255, 255, 0.15);
+
+            font-size: 12px;
+
+            font-weight: bold;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .tools-hero h1 {
+
+            font-size: 52px;
+
+            margin: 0 0 15px;
+
+        }
+
+
+        .tools-hero h1 span {
+
+            color: #c8f5a5;
+
+        }
+
+
+        .tools-hero p {
+
+            font-size: 17px;
+
+            line-height: 1.7;
+
+            max-width: 620px;
+
+            color: #e2f4e7;
+
+        }
+
+
+        .tools-hero-icon {
+
+            font-size: 125px;
+
+            z-index: 2;
+
+            animation:
+                floatTool 3s ease-in-out infinite;
+
+        }
+
+
+        @keyframes floatTool {
+
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+
+        }
+
+
+        /* =========================
+           MAIN SECTION
+        ========================= */
+
+        .tools-section {
+
+            padding: 80px 9%;
+
+        }
+
+
+        .tools-heading {
+
+            text-align: center;
+
+            margin-bottom: 50px;
+
+        }
+
+
+        .tools-heading p {
+
+            color: #4f8a55;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            letter-spacing: 2px;
+
+        }
+
+
+        .tools-heading h2 {
+
+            font-size: 36px;
+
+            margin: 12px 0;
+
+            color: #1e4c31;
+
+        }
+
+
+        .tools-heading span {
+
+            color: #6a776e;
+
+        }
+
+
+        /* =========================
+           GRID
+        ========================= */
+
+        .tools-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(290px, 1fr));
+
+            gap: 25px;
+
+        }
+
+
+        /* =========================
+           CARD
+        ========================= */
+
+        .tool-card {
+
+            background: white;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            border:
+                1px solid #e5ece6;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.07);
+
+            transition: 0.3s;
+
+        }
+
+
+        .tool-card:hover {
+
+            transform:
+                translateY(-8px);
+
+            box-shadow:
+                0 18px 40px rgba(30, 80, 45, 0.15);
+
+        }
+
+
+        .tool-image {
+
+            height: 160px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #e7f4e8,
+                    #d4ead7
+                );
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 75px;
+
+        }
+
+
+        .tool-content {
+
+            padding: 25px;
+
+        }
+
+
+        .tool-tag {
+
+            display: inline-block;
+
+            background: #e8f6e9;
+
+            color: #2e7d32;
+
+            padding: 6px 12px;
+
+            border-radius: 30px;
+
+            font-size: 11px;
+
+            font-weight: bold;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .tool-content h3 {
+
+            font-size: 22px;
+
+            margin: 5px 0 18px;
+
+            color: #214b31;
+
+        }
+
+
+        /* =========================
+           INFORMATION
+        ========================= */
+
+        .tool-info {
+
+            display: flex;
+
+            gap: 12px;
+
+            margin-bottom: 16px;
+
+            padding-bottom: 14px;
+
+            border-bottom:
+                1px solid #edf1ed;
+
+        }
+
+
+        .tool-info-icon {
+
+            width: 38px;
+
+            height: 38px;
+
+            border-radius: 10px;
+
+            background: #eef8ef;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 18px;
+
+            flex-shrink: 0;
+
+        }
+
+
+        .tool-info small {
+
+            display: block;
+
+            font-size: 10px;
+
+            color: #7a8a7d;
+
+            font-weight: bold;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        .tool-info p {
+
+            margin: 0;
+
+            color: #425247;
+
+            font-size: 13px;
+
+            line-height: 1.5;
+
+        }
+
+
+        /* =========================
+           IMPORTANT NOTE
+        ========================= */
+
+        .tools-note {
+
+            margin-top: 50px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #1e5635,
+                    #347a4b
+                );
+
+            color: white;
+
+            padding: 35px;
+
+            border-radius: 22px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 20px;
+
+        }
+
+
+        .tools-note-icon {
+
+            font-size: 45px;
+
+        }
+
+
+        .tools-note h3 {
+
+            margin: 0 0 8px;
+
+        }
+
+
+        .tools-note p {
+
+            margin: 0;
+
+            color: #dcf3df;
+
+            line-height: 1.6;
+
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        .tools-footer {
+
+            background: #183d29;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 35px;
+
+        }
+
+
+        .tools-footer h3 {
+
+            margin: 0 0 10px;
+
+            font-size: 24px;
+
+        }
+
+
+        .tools-footer p {
+
+            margin: 0;
+
+            color: #c6d8ca;
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media(max-width: 1050px) {
+
+            .navbar {
+
+                flex-wrap: wrap;
+
+                padding: 20px 6%;
+
+            }
+
+
+            .nav-links {
+
+                width: 100%;
+
+                margin-left: 0;
+
+                flex-wrap: wrap;
+
+            }
+
+
+        }
+
+
+        @media(max-width: 768px) {
+
+            .navbar {
+
+                gap: 15px;
+
+            }
+
+
+            .logo {
+
+                font-size: 24px;
+
+            }
+
+
+            .back-home {
+
+                padding: 11px 16px;
+
+                font-size: 14px;
+
+            }
+
+
+            .nav-links {
+
+                gap: 15px;
+
+            }
+
+
+            .tools-hero {
+
+                flex-direction: column;
+
+                text-align: center;
+
+                padding: 60px 7%;
+
+            }
+
+
+            .tools-hero h1 {
+
+                font-size: 38px;
+
+            }
+
+
+            .tools-hero-icon {
+
+                font-size: 90px;
+
+                margin-top: 25px;
+
+            }
+
+
+            .tools-section {
+
+                padding: 60px 6%;
+
+            }
+
+
+            .tools-note {
+
+                flex-direction: column;
+
+                text-align: center;
+
+            }
+
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <nav class="navbar">
+
+
+        <div class="logo">
+            🌾 KrishiSetu
+        </div>
+
+
+        <a
+            href="index.html"
+            class="back-home"
+        >
+            ← Back to Home
+        </a>
+
+
+        <ul class="nav-links">
+
+
+            <li>
+                <a href="index.html#dashboard">
+                    Dashboard
+                </a>
+            </li>
+
+
+            <li>
+                <a href="fertilizer-information.html">
+                    Fertilizer Information
+                </a>
+            </li>
+
+
+            <li>
+                <a href="farming-tools.html">
+                    Farming Tools
+                </a>
+            </li>
+
+
+        </ul>
+
+
+        <button id="darkModeBtn">
+            🌙
+        </button>
+
+
+    </nav>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="tools-hero">
+
+
+        <div class="tools-hero-content">
+
+
+            <div class="tools-badge">
+                🚜 SMART FARMING GUIDE
+            </div>
+
+
+            <h1>
+                Farming
+                <span>Tools</span>
+            </h1>
+
+
+            <p>
+                Explore essential farming tools and learn
+                what they are used for, when they are used,
+                and how they support different stages of farming.
+            </p>
+
+
+        </div>
+
+
+        <div class="tools-hero-icon">
+            🚜
+        </div>
+
+
+    </section>
+
+
+    <!-- =========================
+         MAIN SECTION
+    ========================== -->
+
+    <section class="tools-section">
+
+
+        <div class="tools-heading">
+
+
+            <p>
+                AGRICULTURAL EQUIPMENT
+            </p>
+
+
+            <h2>
+                Know Your Farming Tools
+            </h2>
+
+
+            <span>
+                Learn the purpose and correct use of common agricultural tools.
+            </span>
+
+
+        </div>
+
+
+        <div class="tools-grid">
+
+
+            <!-- 1 TRACTOR -->
+
+            <div class="tool-card">
+
+                <div class="tool-image">
+                    🚜
+                </div>
+
+                <div class="tool-content">
+
+                    <span class="tool-tag">
+                        FARM MACHINERY
+                    </span>
+
+                    <h3>
+                        Tractor
+                    </h3>
+
+                    <div class="tool-info">
+
+                        <div class="tool-info-icon">
+                            🎯
+                        </div>
+
+                        <div>
+
+                            <small>
+                                USED FOR
+                            </small>
+
+                            <p>
+                                Used for pulling agricultural
+                                equipment and transporting loads.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="tool-info">
+
+                        <div class="tool-info-icon">
+                            📅
+                        </div>
+
+                        <div>
+
+                            <small>
+                                WHEN USED
+                            </small>
+
+                            <p>
+                                Used during land preparation,
+                                sowing, harvesting and transport.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="tool-info">
+
+                        <div class="tool-info-icon">
+                            ⚙️
+                        </div>
+
+                        <div>
+
+                            <small>
+                                PURPOSE
+                            </small>
+
+                            <p>
+                                Reduces manual labour and
+                                saves time in farming.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 2 PLOUGH -->
+
+            <div class="tool-card">
+
+                <div class="tool-image">
+                    🔩
+                </div>
+
+                <div class="tool-content">
+
+                    <span class="tool-tag">
+                        LAND PREPARATION
+                    </span>
+
+                    <h3>
+                        Plough
+                    </h3>
+
+                    <div class="tool-info">
+
+                        <div class="tool-info-icon">
+                            🎯
+                        </div>
+
+                        <div>
+
+                            <small>
+                                USED FOR
+                            </small>
+
+                            <p>
+                                Used to turn and loosen
+                                the soil before planting.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="tool-info">
+
+                        <div class="tool-info-icon">
+                            📅
+                        </div>
+
+                        <div>
+
+                            <small>
+                                WHEN USED
+                            </small>
+
+                            <p>
+                                Mainly used before sowing
+                                during land preparation.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="tool-info">
+
+                        <div class="tool-info-icon">
+                            ⚙️
+                        </div>
+
+                        <div>
+
+                            <small>
+                                PURPOSE
+                            </small>
+
+                            <p>
+                                Helps control weeds and
+                                prepares the soil.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 3 CULTIVATOR -->
+
+            <div class="tool-card">
+
+                <div class="tool-image">
+                    🌱
+                </div>
+
+                <div class="tool-content">
+
+                    <span class="tool-tag">
+                        SOIL PREPARATION
+                    </span>
+
+                    <h3>
+                        Cultivator
+                    </h3>
+
+                    <div class="tool-info">
+
+                        <div class="tool-info-icon">
+                            🎯
+                        </div>
+
+                        <div>
+
+                            <small>
+                                USED FOR
+                            </small>
+
+                            <p>
+                                Used to loosen soil and
+                                control weeds.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="tool-info">
+
+                        <div class="tool-info-icon">
+                            📅
+                        </div>
+
+                        <div>
+
+                            <small>
+                                WHEN USED
+                            </small>
+
+                            <p>
+                                Used before planting or
+                                between crop rows.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="tool-info">
+
+                        <div class="tool-info-icon">
+                            ⚙️
+                        </div>
+
+                        <div>
+
+                            <small>
+                                PURPOSE
+                            </small>
+
+                            <p>
+                                Improves soil condition
+                                and removes weeds.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- 4 ROTAVATOR -->
+
+            <div class="tool-card">
+
+                <div class="tool-image">
+                    ⚙️
+                </div>
+
+                <div class="tool-content">
+
+                    <span class="tool-tag">
+                        LAND PREPARATION
+                    </span>
+
+                    <h3>
+                        Rotavator
+                    </h3>
+
+                    <div class="tool-info">
+
+                        <div class="tool-info-icon">
+                            🎯
+                        </div>
+
+                        <div>
+
+                            <small>
+                                USED FOR
+                            </small>
+
+                            <p>
+                                Used to break and mix
+                                soil quickly.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="tool-info">
+
+                        <div class="tool-info-icon">
+                            ?

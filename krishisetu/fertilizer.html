@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fertilizer Calculator | KrishiSetu</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+
+        <div class="logo">
+            🌾 KrishiSetu
+        </div>
+
+        <ul class="nav-links">
+            <li>
+                <a href="index.html">
+                    ← Back to Dashboard
+                </a>
+            </li>
+        </ul>
+
+        <button id="darkModeBtn">
+            🌙
+        </button>
+
+    </nav>
+
+
+    <!-- PAGE HEADER -->
+
+    <section class="fertilizer-hero">
+
+        <div class="fertilizer-hero-content">
+
+            <div class="fertilizer-badge">
+                🧪 SMART FARMING TOOL
+            </div>
+
+            <h1>
+                Smart Fertilizer
+                <span>Calculator</span>
+            </h1>
+
+            <p>
+                Get estimated fertilizer recommendations and useful
+                crop-specific farming tips based on your farm area.
+            </p>
+
+        </div>
+
+        <div class="fertilizer-hero-icon">
+            🌾
+        </div>
+
+    </section>
+
+
+    <!-- CALCULATOR SECTION -->
+
+    <section class="fertilizer-section">
+
+        <div class="calculator-container">
+
+
+            <!-- CALCULATOR CARD -->
+
+            <div class="calculator-card">
+
+                <div class="calculator-title">
+
+                    <div class="calculator-title-icon">
+                        🧮
+                    </div>
+
+                    <div>
+                        <h2>Calculate Your Requirement</h2>
+
+                        <p>
+                            Select your crop and farm area
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="calculator-inputs">
+
+
+                    <!-- CROP -->
+
+                    <div class="input-group">
+
+                        <label>
+                            🌱 Select Crop
+                        </label>
+
+                        <select id="fertilizerCrop">
+
+    <option value="">
+        Select Crop / Vegetable / Fruit
+    </option>
+
+
+    <!-- FIELD CROPS -->
+
+    <optgroup label="🌾 Field Crops">
+
+        <option value="soybean">
+            🌱 Soybean
+        </option>
+
+        <option value="wheat">
+            🌾 Wheat
+        </option>
+
+        <option value="sugarcane">
+            🎋 Sugarcane
+        </option>
+
+        <option value="cotton">
+            🌿 Cotton
+        </option>
+
+    </optgroup>
+
+
+    <!-- VEGETABLES -->
+
+    <optgroup label="🥬 Vegetables">
+
+        <option value="tomato">
+            🍅 Tomato
+        </option>
+
+        <option value="cucumber">
+            🥒 Cucumber
+        </option>
+
+        <option value="onion">
+            🧅 Onion
+        </option>
+
+        <option value="potato">
+            🥔 Potato
+        </option>
+
+        <option value="brinjal">
+            🍆 Brinjal
+        </option>
+
+    </optgroup>
+
+
+    <!-- FRUITS -->
+
+    <optgroup label="🍎 Fruits">
+
+        <option value="mango">
+            🥭 Mango
+        </option>
+
+        <option value="pomegranate">
+            🍎 Pomegranate
+        </option>
+
+        <option value="banana">
+            🍌 Banana
+        </option>
+
+    </optgroup>
+
+</select>
+
+</div>
+
+
+                    <!-- AREA -->
+
+                    <div class="input-group">
+
+                        <label>
+                            📐 Farm Area
+                        </label>
+
+                        <div class="area-input">
+
+                            <input
+                                type="number"
+                                id="farmArea"
+                                placeholder="Enter farm area"
+                                min="1"
+                            >
+
+                            <span>Acres</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="calculate-btn"
+                    onclick="calculateFertilizer()"
+                >
+
+                    🧮 Calculate Recommendation
+
+                </button>
+
+            </div>
+
+
+            <!-- INFORMATION CARD -->
+
+            <div class="calculator-side-info">
+
+                <div class="side-info-icon">
+                    🌱
+                </div>
+
+                <h3>How It Works?</h3>
+
+                <div class="how-it-works">
+
+                    <div class="step">
+                        <span>1</span>
+                        Select your crop
+                    </div>
+
+                    <div class="step">
+                        <span>2</span>
+                        Enter your farm area
+                    </div>
+
+                    <div class="step">
+                        <span>3</span>
+                        Get fertilizer recommendation
+                    </div>
+
+                </div>
+
+                <div class="info-note">
+                    💡 Recommendations are estimated values for demonstration.
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESULTS -->
+
+    <section
+        class="results-section"
+        id="fertilizerResults"
+        style="display: none;"
+    >
+
+        <div class="results-header">
+
+            <p>YOUR RECOMMENDATION</p>
+
+            <h2 id="selectedCropTitle">
+                Fertilizer Plan
+            </h2>
+
+            <p id="selectedAreaText">
+            </p>
+
+        </div>
+
+
+        <!-- FERTILIZER CARDS -->
+
+        <div class="fertilizer-cards">
+
+
+            <div class="fertilizer-card">
+
+                <div class="fertilizer-icon">
+                    🧪
+                </div>
+
+                <p>Urea</p>
+
+                <h3 id="ureaAmount">
+                    0 kg
+                </h3>
+
+                <span>Nitrogen Support</span>
+
+            </div>
+
+
+            <div class="fertilizer-card">
+
+                <div class="fertilizer-icon">
+                    🌿
+                </div>
+
+                <p>DAP</p>
+
+                <h3 id="dapAmount">
+                    0 kg
+                </h3>
+
+                <span>Root Development</span>
+
+            </div>
+
+
+            <div class="fertilizer-card">
+
+                <div class="fertilizer-icon">
+                    🧂
+                </div>
+
+                <p>MOP</p>
+
+                <h3 id="mopAmount">
+                    0 kg
+                </h3>
+
+                <span>Plant Strength</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- FARMING TIPS -->
+
+        <div class="crop-advisory">
+
+            <div class="advisory-header">
+
+                <div class="advisory-icon">
+                    💡
+                </div>
+
+                <div>
+                    <p>SMART ADVISORY</p>
+
+                    <h2>
+                        Farming Tips for
+                        <span id="cropName">
+                            Your Crop
+                        </span>
+                    </h2>
+                </div>
+
+            </div>
+
+
+            <div class="tips-grid">
+
+
+                <div class="crop-tip-card">
+
+                    <div class="tip-title">
+                        🌱 Crop Care
+                    </div>
+
+                    <p id="cropCareTip">
+                    </p>
+
+                </div>
+
+
+                <div class="crop-tip-card">
+
+                    <div class="tip-title">
+                        💧 Irrigation
+                    </div>
+
+                    <p id="irrigationTip">
+                    </p>
+
+                </div>
+
+
+                <div class="crop-tip-card">
+
+                    <div class="tip-title">
+                        🧪 Fertilizer Use
+                    </div>
+
+                    <p id="fertilizerTip">
+                    </p>
+
+                </div>
+
+
+                <div class="crop-tip-card">
+
+                    <div class="tip-title">
+                        ⚠️ Important Advice
+                    </div>
+
+                    <p id="importantTip">
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- DISCLAIMER -->
+
+        <div class="fertilizer-disclaimer">
+
+            ⚠️ These values are estimated for demonstration.
+            Actual fertilizer requirements should be decided using
+            soil testing and local agricultural expert guidance.
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <h3>
+            🌾 KrishiSetu
+        </h3>
+
+        <p>
+            Smart farming tools for better decisions.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>KrishiSetu | Crop Recommendation</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+    <div class="nav-container">
+
+        <a
+            href="index.html"
+            class="nav-logo"
+        >
+
+            <span class="logo-icon">
+                🌾
+            </span>
+
+            <span>
+                KrishiSetu
+            </span>
+
+        </a>
+
+
+        <div class="nav-links">
+
+           
+
+        </div>
+
+
+        <a
+            href="index.html"
+            class="back-home-btn"
+        >
+            ← Back to Home
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- PAGE -->
+
+<section class="recommendation-page">
+
+
+    <!-- HEADING -->
+
+    <div class="recommendation-heading">
+
+        <p class="tool-tag">
+            SMART FARM TOOL
+        </p>
+
+        <h1>
+            🌱 Crop & Fruit Recommendation
+        </h1>
+
+        <p class="tool-subtitle">
+
+            Get smart crop and fruit recommendations based on
+            soil type, season and water availability.
+
+        </p>
+
+    </div>
+
+
+    <!-- MAIN CARD -->
+
+    <div class="recommendation-card">
+
+
+        <div class="card-heading">
+
+            <div class="card-icon">
+                🌱
+            </div>
+
+
+            <div>
+
+                <h2>
+                    Enter Farm Details
+                </h2>
+
+                <p>
+                    Select your farm conditions for a suitable recommendation.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- CATEGORY -->
+
+        <div class="recommendation-group">
+
+            <label for="recommendCategory">
+
+                🌾 What do you want to grow?
+
+            </label>
+
+
+            <select id="recommendCategory">
+
+                <option value="">
+                    Select Category
+                </option>
+
+                <option value="crop">
+                    🌾 Field Crops
+                </option>
+
+                <option value="fruit">
+                    🍎 Fruits
+                </option>
+
+                   <option value="vegetable">
+            🥬 Vegetables
+        </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- SOIL -->
+
+        <div class="recommendation-group">
+
+            <label for="recommendSoil">
+
+                🌱 Select Soil Type
+
+            </label>
+
+
+            <select id="recommendSoil">
+
+                <option value="">
+                    Select Soil Type
+                </option>
+
+                <option value="black">
+                    Black Soil
+                </option>
+
+                <option value="red">
+                    Red Soil
+                </option>
+
+                <option value="sandy">
+                    Sandy Soil
+                </option>
+
+                <option value="clay">
+                    Clay Soil
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- SEASON -->
+
+        <div class="recommendation-group">
+
+            <label for="recommendSeason">
+
+                🌤️ Select Season
+
+            </label>
+
+
+            <select id="recommendSeason">
+
+                <option value="">
+                    Select Season
+                </option>
+
+                <option value="kharif">
+                    Kharif
+                </option>
+
+                <option value="rabi">
+                    Rabi
+                </option>
+
+                <option value="summer">
+                    Summer
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- WATER -->
+
+        <div class="recommendation-group">
+
+            <label for="waterAvailability">
+
+                💧 Water Availability
+
+            </label>
+
+
+            <select id="waterAvailability">
+
+                <option value="">
+                    Select Water Availability
+                </option>
+
+                <option value="low">
+                    Low
+                </option>
+
+                <option value="medium">
+                    Medium
+                </option>
+
+                <option value="high">
+                    High
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- BUTTON -->
+
+        <button
+            class="recommendation-btn"
+            onclick="getCropRecommendation()"
+        >
+
+            🌱 Get Smart Recommendation
+
+        </button>
+
+<!-- RESULT -->
+
+<div
+    class="recommendation-result"
+    id="recommendationResult"
+>
+
+    <div class="result-icon">
+        🌱
+    </div>
+
+    <p class="result-label">
+        SMART RECOMMENDATION
+    </p>
+
+    <h2 id="recommendationTitle">
+        Recommended Option
+    </h2>
+
+    <p
+        class="recommended-name"
+        id="recommendedName"
+    >
+    </p>
+
+    <p
+        class="recommendation-reason"
+        id="recommendationReason"
+    >
+    </p>
+
+
+    <!-- FARM INFORMATION -->
+
+    <div class="recommendation-details">
+
+        <div class="detail-box">
+
+            <span>
+                ⏳
+            </span>
+
+            <div>
+
+                <small>
+                    GROWING PERIOD
+                </small>
+
+                <p id="growingPeriod">
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="detail-box">
+
+            <span>
+                💧
+            </span>
+
+            <div>
+
+                <small>
+                    WATER REQUIREMENT
+                </small>
+
+                <p id="waterRequirement">
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- TIPS -->
+
+    <div class="recommendation-tips">
+
+        <h3>
+            💡 Growing Tips
+        </h3>
+
+        <ul
+            id="recommendationTips"
+        >
+
+        </ul>
+
+    </div>
+
+
+    <p
+        class="important-note"
+        id="recommendationNote"
+    >
+
+    </p>
+
+</div>
+
+    <!-- INFO CARDS -->
+
+    <div class="recommendation-info">
+
+
+        <div class="info-card">
+
+            <div>
+                🌱
+            </div>
+
+            <h3>
+                Soil Analysis
+            </h3>
+
+            <p>
+                Recommendations consider the selected soil conditions.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div>
+                🌤️
+            </div>
+
+            <h3>
+                Seasonal Planning
+            </h3>
+
+            <p>
+                Choose suitable crops and fruits according to the season.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <div>
+                💧
+            </div>
+
+            <h3>
+                Water Management
+            </h3>
+
+            <p>
+                Recommendations consider the available water level.
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+
+        <div class="footer-brand">
+
+            <h2>
+                🌾 KrishiSetu
+            </h2>
+
+            <p>
+                Smart digital solutions designed to help
+                farmers make better decisions.
+            </p>
+
+        </div>
+
+
+
+
+        <div class="footer-contact">
+
+            <h3>
+                Smart Farming
+            </h3>
+
+            <p>
+                📍 Maharashtra, India
+            </p>
+
+            <p>
+                🌱 Technology for Farmers
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+   
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

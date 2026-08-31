@@ -1,0 +1,3699 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f6f8f3;
+    color: #1f2d1f;
+    transition: 0.3s;
+}
+
+
+/* Navigation */
+
+.navbar {
+    height: 70px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 8%;
+
+    background-color: white;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2f6b3c;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #2f6b3c;
+}
+
+#darkModeBtn {
+    border: none;
+
+    background-color: #eef5ee;
+
+    padding: 10px 14px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+
+/* Hero Section */
+
+.hero {
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 60px 10%;
+
+    background: linear-gradient(
+        120deg,
+        #e8f5e9,
+        #ffffff
+    );
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.small-title {
+    color: #2f6b3c;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 55px;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #2f6b3c;
+}
+
+.hero-content p {
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #666;
+
+    margin-bottom: 25px;
+}
+
+.explore-btn {
+    background-color: #2f6b3c;
+
+    color: white;
+
+    border: none;
+
+    padding: 15px 25px;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+.explore-btn:hover {
+    transform: translateY(-3px);
+}
+
+.hero-image {
+    font-size: 180px;
+}
+
+
+/* General Section */
+
+.section {
+    padding: 80px 10%;
+}
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+.section-title p {
+    color: #2f6b3c;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+.section-title h2 {
+    font-size: 35px;
+}
+
+
+/* Dashboard */
+
+.dashboard-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.info-card {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0,0,0,0.08);
+}
+
+.icon {
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+.info-card h3 {
+    color: #666;
+
+    margin-bottom: 10px;
+}
+
+.info-card h2 {
+    color: #2f6b3c;
+
+    margin-bottom: 8px;
+}
+
+
+/* Market */
+
+.market-section {
+    background-color: #edf5ed;
+}
+
+.market-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.market-card {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0,0,0,0.08);
+}
+
+.market-card h2 {
+    font-size: 30px;
+
+    margin: 15px 0;
+
+    color: #2f6b3c;
+}
+
+.market-card p {
+    color: #777;
+}
+
+.up {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: green;
+
+    font-weight: bold;
+}
+
+.down {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: red;
+
+    font-weight: bold;
+}
+
+
+/* Search */
+
+#cropSearch {
+    width: 100%;
+
+    max-width: 500px;
+
+    display: block;
+
+    margin:
+        0 auto
+        40px auto;
+
+    padding: 15px;
+
+    border:
+        1px solid #ccc;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+}
+
+
+/* Crop Cards */
+
+.crop-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.crop-card {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px
+        rgba(0,0,0,0.08);
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.crop-card:hover {
+    transform:
+        translateY(-8px);
+}
+
+.crop-icon {
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+.crop-card h3 {
+    color: #2f6b3c;
+
+    margin-bottom: 15px;
+}
+
+.crop-card p {
+    margin: 10px 0;
+
+    color: #666;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #1f3b25;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 40px 10%;
+}
+
+footer h3 {
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+footer p {
+    color: #d6e5d8;
+
+    margin: 10px 0;
+}
+
+.copyright {
+    margin-top: 20px;
+
+    font-size: 14px;
+}
+
+
+/* Dark Mode */
+
+.dark-mode {
+    background-color: #1b1f1b;
+
+    color: white;
+}
+
+.dark-mode .navbar,
+.dark-mode .info-card,
+.dark-mode .market-card,
+.dark-mode .crop-card {
+    background-color: #2b302b;
+
+    color: white;
+}
+
+.dark-mode .hero {
+    background:
+        linear-gradient(
+            120deg,
+            #263526,
+            #1b1f1b
+        );
+}
+
+.dark-mode .hero-content p,
+.dark-mode .info-card h3,
+.dark-mode .market-card p,
+.dark-mode .crop-card p {
+    color: #cccccc;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+
+    .dashboard-grid,
+    .market-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .crop-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero-image {
+        font-size: 120px;
+    }
+
+    .dashboard-grid,
+    .market-grid,
+    .crop-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* FARMING TIPS SECTION */
+
+.farming-tips {
+    padding: 60px 8%;
+    text-align: center;
+    background-color: #f4f8f2;
+}
+
+.farming-tips .small-title {
+    font-size: 12px;
+    font-weight: bold;
+    color: #567b60;
+    letter-spacing: 2px;
+}
+
+.farming-tips h2 {
+    font-size: 30px;
+    color: #263f2d;
+    margin-bottom: 30px;
+}
+
+.farming-tips .tips-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.farming-tips .tip-card {
+    background: white;
+    width: 280px;
+    min-height: 180px;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.farming-tips .tip-icon {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.farming-tips .tip-card h3 {
+    color: #2f5935;
+    margin: 10px 0;
+}
+
+.farming-tips .tip-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.login-nav-btn {
+    text-decoration: none;
+    background-color: #2f6b3c;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.login-nav-btn:hover {
+    background-color: #24572f;
+}
+.user-menu {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+
+    position: absolute;
+    top: 50px;
+    right: 0;
+
+    width: 190px;
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+    overflow: hidden;
+
+    z-index: 1000;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.user-name {
+    padding: 15px;
+
+    font-weight: bold;
+
+    color: #2f6b3c;
+
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu a,
+.dropdown-menu button {
+    display: block;
+
+    width: 100%;
+
+    padding: 14px 15px;
+
+    border: none;
+
+    background: white;
+
+    text-align: left;
+
+    text-decoration: none;
+
+    color: #333;
+
+    font-size: 14px;
+
+    cursor: pointer;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu button:hover {
+    background-color: #eef5ee;
+}
+
+.dropdown-menu button {
+    color: #c0392b;
+}
+/* FARM LOCATION SECTION */
+
+.location-section {
+    background-color: #edf5ed;
+}
+
+.location-box {
+    max-width: 900px;
+    margin: auto;
+
+    background-color: white;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.location-group {
+    margin-bottom: 20px;
+}
+
+.location-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+
+    color: #2f6b3c;
+}
+
+.location-group select {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    background-color: white;
+
+    cursor: pointer;
+}
+
+.location-group select:disabled {
+    background-color: #f2f2f2;
+
+    cursor: not-allowed;
+}
+
+.save-location-btn {
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background-color: #2f6b3c;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    margin-top: 10px;
+}
+
+.save-location-btn:hover {
+    background-color: #24572f;
+}
+
+#locationResult {
+    text-align: center;
+
+    margin-top: 20px;
+
+    font-weight: bold;
+
+    color: #2f6b3c;
+}
+
+/* Saved Farm Location */
+
+.saved-location-card {
+    display: none;
+
+    max-width: 750px;
+
+    margin: 0 auto;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.08);
+}
+
+.saved-location-icon {
+    font-size: 45px;
+
+    margin-bottom: 10px;
+}
+
+.saved-location-card h2 {
+    color: #2f6b3c;
+
+    margin: 15px 0 25px;
+}
+
+.change-location-btn {
+    background-color: #2f6b3c;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 25px;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.change-location-btn:hover {
+    transform: translateY(-3px);
+}
+
+/* Weather Section */
+
+.weather-section {
+    text-align: center;
+}
+
+.weather-card {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 35px;
+
+    background: white;
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.weather-icon {
+    font-size: 70px;
+}
+
+.weather-info {
+    text-align: left;
+}
+
+.weather-info h2 {
+    font-size: 40px;
+    color: #2f6b45;
+    margin-bottom: 8px;
+}
+
+.weather-info h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.weather-info p {
+    color: #666;
+}
+
+
+/* FARMER INFORMATION AT A GLANCE */
+
+.farmer-glance-section {
+    padding: 55px 8%;
+}
+
+.farmer-glance-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.farmer-glance-card {
+    background: white;
+
+    padding: 22px;
+
+    border-radius: 14px;
+
+    min-height: 150px;
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+
+    border: 1px solid #edf1ed;
+
+    transition: 0.3s;
+}
+
+.farmer-glance-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 12px 25px rgba(47, 107, 60, 0.15);
+}
+
+.glance-icon {
+    font-size: 28px;
+
+    margin-bottom: 12px;
+}
+
+.glance-label {
+    font-size: 14px;
+
+    color: #666;
+
+    margin-bottom: 8px;
+}
+
+.farmer-glance-card h3 {
+    color: #2f6b3c;
+
+    font-size: 22px;
+
+    margin-bottom: 7px;
+}
+
+.farmer-glance-card span {
+    font-size: 13px;
+
+    color: #777;
+}
+
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .farmer-glance-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .farmer-glance-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* FERTILIZER CALCULATOR */
+
+.fertilizer-section {
+    background: #f6f8f3;
+}
+
+.fertilizer-box {
+    max-width: 600px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.08);
+}
+
+.fertilizer-group {
+    margin-bottom: 20px;
+}
+
+.fertilizer-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+
+    color: #2f6b3c;
+}
+
+.fertilizer-group select,
+.fertilizer-group input {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+}
+
+.calculate-btn {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #2f6b3c;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.fertilizer-result {
+    margin-top: 25px;
+
+    padding: 20px;
+
+    background: #edf5ed;
+
+    border-radius: 12px;
+
+    text-align: center;
+
+    color: #2f6b3c;
+
+    font-weight: bold;
+
+    line-height: 1.8;
+}
+/* MORE TOOLS MENU */
+
+.tools-menu {
+    position: relative;
+}
+
+.tools-btn {
+    border: none;
+
+    background: #eef5ee;
+
+    color: #2f6b3c;
+
+    padding: 10px 16px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.tools-btn:hover {
+    background: #dcebdd;
+}
+
+.tools-dropdown {
+    display: none;
+
+    position: absolute;
+
+    top: 48px;
+    right: 0;
+
+    width: 230px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.15);
+
+    overflow: hidden;
+
+    z-index: 1000;
+}
+
+.tools-dropdown.show {
+    display: block;
+}
+
+.tools-dropdown a {
+    display: block;
+
+    padding: 14px 18px;
+
+    text-decoration: none;
+
+    color: #333;
+
+    font-size: 14px;
+
+    border-bottom:
+        1px solid #f0f0f0;
+}
+
+.tools-dropdown a:hover {
+    background: #edf5ed;
+
+    color: #2f6b3c;
+}
+
+/* ==========================================
+   PROFESSIONAL FERTILIZER CALCULATOR PAGE
+========================================== */
+
+
+/* HERO */
+
+.fertilizer-hero {
+
+    min-height: 320px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 60px 10%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #edf5ed,
+            #ffffff
+        );
+}
+
+.fertilizer-hero-content {
+    max-width: 650px;
+}
+
+.fertilizer-badge {
+
+    display: inline-block;
+
+    background: #dcebdd;
+
+    color: #2f6b3c;
+
+    padding: 9px 15px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 20px;
+}
+
+.fertilizer-hero h1 {
+
+    font-size: 48px;
+
+    margin-bottom: 18px;
+}
+
+.fertilizer-hero h1 span {
+    color: #2f6b3c;
+}
+
+.fertilizer-hero p {
+
+    color: #666;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+}
+
+.fertilizer-hero-icon {
+    font-size: 130px;
+}
+
+
+/* CALCULATOR AREA */
+
+.fertilizer-section {
+
+    padding: 70px 10%;
+
+    background: #f6f8f3;
+}
+
+.calculator-container {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr 1fr;
+
+    gap: 25px;
+}
+
+
+/* CALCULATOR CARD */
+
+.calculator-card {
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 0, 0, 0.07);
+}
+
+.calculator-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+
+    padding-bottom: 25px;
+
+    border-bottom:
+        1px solid #edf1ed;
+}
+
+.calculator-title-icon {
+
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #edf5ed;
+
+    border-radius: 15px;
+
+    font-size: 28px;
+}
+
+.calculator-title h2 {
+    font-size: 22px;
+}
+
+.calculator-title p {
+    color: #777;
+    margin-top: 5px;
+}
+
+
+/* INPUTS */
+
+.calculator-inputs {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.input-group label {
+
+    display: block;
+
+    font-weight: bold;
+
+    color: #2f6b3c;
+
+    margin-bottom: 10px;
+}
+
+.input-group select,
+.input-group input {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border:
+        1px solid #dce5dc;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.input-group select:focus,
+.input-group input:focus {
+
+    border-color:
+        #2f6b3c;
+}
+
+.area-input {
+
+    display: flex;
+
+    align-items: center;
+
+    border:
+        1px solid #dce5dc;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.area-input input {
+
+    border: none;
+}
+
+.area-input span {
+
+    padding: 14px 18px;
+
+    background: #edf5ed;
+
+    color: #2f6b3c;
+
+    font-weight: bold;
+}
+
+
+/* CALCULATE BUTTON */
+
+.calculate-btn {
+
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #2f6b3c;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.calculate-btn:hover {
+
+    background: #24572f;
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* SIDE INFO */
+
+.calculator-side-info {
+
+    background: #2f6b3c;
+
+    color: white;
+
+    padding: 35px;
+
+    border-radius: 20px;
+}
+
+.side-info-icon {
+    font-size: 45px;
+}
+
+.calculator-side-info h3 {
+
+    font-size: 24px;
+
+    margin:
+        15px 0 25px;
+}
+
+.how-it-works {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.step {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.step span {
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: white;
+
+    color: #2f6b3c;
+
+    border-radius: 50%;
+
+    font-weight: bold;
+}
+
+.info-note {
+
+    margin-top: 30px;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.3);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* RESULTS */
+
+.results-section {
+
+    padding: 70px 10%;
+
+    background: white;
+}
+
+.results-header {
+
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+.results-header > p:first-child {
+
+    color: #2f6b3c;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.results-header h2 {
+
+    font-size: 35px;
+
+    margin:
+        10px 0;
+}
+
+#selectedAreaText {
+    color: #777;
+}
+
+
+/* FERTILIZER CARDS */
+
+.fertilizer-cards {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.fertilizer-card {
+
+    background: #f7faf6;
+
+    padding: 28px;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    border:
+        1px solid #e5ece5;
+
+    transition: 0.3s;
+}
+
+.fertilizer-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, 0.08);
+}
+
+.fertilizer-icon {
+
+    width: 60px;
+    height: 60px;
+
+    margin:
+        0 auto 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: white;
+
+    border-radius: 15px;
+
+    font-size: 30px;
+}
+
+.fertilizer-card p {
+    color: #777;
+}
+
+.fertilizer-card h3 {
+
+    font-size: 28px;
+
+    color: #2f6b3c;
+
+    margin: 10px 0;
+}
+
+.fertilizer-card span {
+
+    font-size: 13px;
+
+    color: #888;
+}
+
+
+/* CROP ADVISORY */
+
+.crop-advisory {
+
+    max-width: 1100px;
+
+    margin:
+        60px auto 0;
+
+    background: #f6f8f3;
+
+    padding: 40px;
+
+    border-radius: 22px;
+}
+
+.advisory-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+.advisory-icon {
+    font-size: 45px;
+}
+
+.advisory-header p {
+
+    color: #2f6b3c;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 5px;
+}
+
+.advisory-header h2 {
+    font-size: 26px;
+}
+
+.advisory-header span {
+    color: #2f6b3c;
+}
+
+
+/* TIPS GRID */
+
+.tips-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.crop-tip-card {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    border:
+        1px solid #e6ece6;
+}
+
+.tip-title {
+
+    color: #2f6b3c;
+
+    font-weight: bold;
+
+    margin-bottom: 12px;
+}
+
+.crop-tip-card p {
+
+    color: #666;
+
+    line-height: 1.7;
+
+    font-size: 14px;
+}
+
+
+/* DISCLAIMER */
+
+.fertilizer-disclaimer {
+
+    max-width: 1100px;
+
+    margin:
+        30px auto 0;
+
+    padding: 18px 22px;
+
+    background: #fff8e8;
+
+    border-left:
+        4px solid #e0a52b;
+
+    border-radius: 10px;
+
+    color: #795b16;
+
+    line-height: 1.6;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .calculator-container {
+
+        grid-template-columns:
+            1fr;
+    }
+
+    .fertilizer-cards {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .fertilizer-hero {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 30px;
+    }
+
+    .fertilizer-hero h1 {
+        font-size: 38px;
+    }
+
+    .calculator-inputs,
+    .tips-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+    .fertilizer-cards {
+
+        grid-template-columns:
+            1fr;
+    }
+
+    .calculator-card,
+    .calculator-side-info,
+    .crop-advisory {
+
+        padding: 25px;
+    }
+
+}
+
+/* ========================================
+   PROFESSIONAL FARM LOCATION CARD
+======================================== */
+
+.location-section {
+    background: #f6f8f3;
+}
+
+
+/* MAIN LOCATION CARD */
+
+.location-box {
+    max-width: 800px;
+    margin: 0 auto;
+
+    background: #ffffff;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    border: 1px solid #e4ebe3;
+
+    box-shadow:
+        0 12px 35px
+        rgba(31, 45, 31, 0.08);
+}
+
+
+/* LOCATION FIELDS IN 2 COLUMNS */
+
+.location-box {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+
+/* EACH DROPDOWN GROUP */
+
+.location-group {
+    margin-bottom: 0;
+}
+
+
+/* LABEL */
+
+.location-group label {
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #2f6b3c;
+
+    margin-bottom: 8px;
+}
+
+
+/* SELECT DROPDOWN */
+
+.location-group select {
+    width: 100%;
+
+    height: 50px;
+
+    padding: 0 15px;
+
+    border: 1px solid #d8e2d6;
+
+    border-radius: 10px;
+
+    background: #f9fbf8;
+
+    color: #263f2d;
+
+    font-size: 15px;
+
+    outline: none;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.location-group select:focus {
+    border-color: #2f6b3c;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(47, 107, 60, 0.12);
+
+    background: white;
+}
+
+
+.location-group select:disabled {
+    background: #f1f3f0;
+
+    color: #999;
+
+    cursor: not-allowed;
+}
+
+
+/* SAVE BUTTON */
+
+.save-location-btn {
+    grid-column: 1 / -1;
+
+    width: 100%;
+
+    height: 52px;
+
+    margin-top: 5px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2f6b3c,
+            #438a50
+        );
+
+    color: white;
+
+    border: none;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.save-location-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px
+        rgba(47, 107, 60, 0.25);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+
+    .location-box {
+        grid-template-columns: 1fr;
+
+        padding: 25px;
+    }
+
+}
+
+/* =========================================
+   LOCATION & WEATHER PAGE
+========================================= */
+
+.location-weather-page {
+    min-height: 100vh;
+    padding: 60px 8%;
+    background: linear-gradient(135deg, #f4f8f2, #edf5ed);
+}
+
+.tool-tag {
+    color: #2f6b3c;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+}
+
+.location-weather-page h1 {
+    font-size: 48px;
+    color: #1f3b25;
+    margin-bottom: 12px;
+}
+
+.tool-subtitle {
+    font-size: 18px;
+    color: #647068;
+    margin-bottom: 45px;
+}
+
+/* Main Layout */
+
+.location-weather-grid {
+    max-width: 1050px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+
+/* Common Cards */
+
+.location-tool-card,
+.weather-tool-card {
+    background: white;
+    border-radius: 22px;
+    padding: 32px;
+    box-shadow: 0 15px 40px rgba(31, 59, 37, 0.10);
+    border: 1px solid #e5eee4;
+}
+
+
+/* Card Header */
+
+.card-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.card-heading .card-icon {
+    width: 48px;
+    height: 48px;
+    background: #edf7ef;
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+}
+
+.card-heading h2 {
+    font-size: 22px;
+    color: #1f3b25;
+}
+
+.card-heading p {
+    font-size: 13px;
+    color: #777;
+    margin-top: 4px;
+}
+
+
+/* Location Form */
+
+.location-tool-card form {
+    display: grid;
+    gap: 18px;
+}
+
+.location-tool-card label {
+    display: block;
+    margin-bottom: 8px;
+
+    font-size: 14px;
+    font-weight: bold;
+    color: #31543a;
+}
+
+.location-tool-card select {
+    width: 100%;
+    padding: 14px 15px;
+
+    border: 1px solid #d7e2d6;
+    border-radius: 12px;
+
+    background: #f9fcf9;
+    color: #263b2b;
+
+    font-size: 15px;
+    outline: none;
+
+    cursor: pointer;
+}
+
+.location-tool-card select:focus {
+    border-color: #2f6b3c;
+    box-shadow: 0 0 0 3px rgba(47, 107, 60, 0.10);
+}
+
+.location-tool-card select:disabled {
+    background: #f1f3f1;
+    cursor: not-allowed;
+}
+
+
+/* Save Button */
+
+.save-location-btn {
+    width: 100%;
+    padding: 15px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #2f6b3c;
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+    margin-top: 8px;
+
+    transition: 0.3s;
+}
+
+.save-location-btn:hover {
+    background: #24572f;
+    transform: translateY(-2px);
+}
+
+
+/* Saved Location */
+
+.saved-location-card {
+    display: none;
+    text-align: center;
+}
+
+.saved-location-icon {
+    width: 75px;
+    height: 75px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #edf7ef;
+    border-radius: 20px;
+
+    font-size: 35px;
+}
+
+.location-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #63806a;
+
+    margin-bottom: 10px;
+}
+
+#savedLocationText {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1f3b25;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.change-location-btn {
+    border: none;
+
+    padding: 13px 22px;
+
+    background: #eef5ee;
+    color: #2f6b3c;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.change-location-btn:hover {
+    background: #dcebdd;
+}
+
+
+/* Weather Card */
+
+.weather-tool-card {
+    min-height: 380px;
+}
+
+.weather-main {
+    text-align: center;
+    padding: 15px 0;
+}
+
+#weatherIcon {
+    width: 105px;
+    height: 105px;
+
+    margin: 10px auto 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(135deg, #fff6d8, #eef7ef);
+    border-radius: 50%;
+
+    font-size: 58px;
+}
+
+#weatherTemperature {
+    font-size: 54px;
+    font-weight: bold;
+    color: #2f6b3c;
+    margin-bottom: 5px;
+}
+
+#weatherCondition {
+    font-size: 21px;
+    font-weight: bold;
+    color: #25352a;
+    margin-bottom: 10px;
+}
+
+#weatherLocation {
+    display: inline-block;
+
+    background: #f3f7f2;
+    color: #5d7061;
+
+    padding: 9px 16px;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+}
+
+
+/* Empty Weather State */
+
+.weather-empty {
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.weather-empty-icon {
+    font-size: 65px;
+    margin-bottom: 18px;
+}
+
+.weather-empty h3 {
+    color: #1f3b25;
+    margin-bottom: 10px;
+}
+
+.weather-empty p {
+    color: #788078;
+    line-height: 1.6;
+}
+
+
+/* Back Button */
+
+.back-home {
+    display: inline-block;
+
+    margin-bottom: 45px;
+
+    color: #2f6b3c;
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+.back-home:hover {
+    text-decoration: underline;
+}
+
+
+/* Responsive */
+
+@media (max-width: 850px) {
+
+    .location-weather-page {
+        padding: 40px 5%;
+    }
+
+    .location-weather-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .location-weather-page h1 {
+        font-size: 38px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .location-weather-page h1 {
+        font-size: 32px;
+    }
+
+    .location-tool-card,
+    .weather-tool-card {
+        padding: 22px;
+    }
+
+    #weatherTemperature {
+        font-size: 45px;
+    }
+
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 16px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    font-size: 30px;
+}
+
+.logo-text {
+    font-size: 26px;
+    font-weight: 700;
+    color: #2f6b45;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4b5563;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.nav-links a:hover,
+.active-nav {
+    color: #2f6b45 !important;
+}
+
+.back-home-btn {
+    text-decoration: none;
+    background: #edf7f0;
+    color: #2f6b45;
+    padding: 11px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.back-home-btn:hover {
+    background: #2f6b45;
+    color: white;
+}
+
+
+/* ================= FOOTER ================= */
+
+/* =========================
+   PROFESSIONAL FOOTER
+========================= */
+
+.footer {
+    background: #183d2a;
+    color: white;
+    margin-top: 60px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+
+    padding: 45px 30px;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+
+    gap: 50px;
+}
+
+.footer-brand h2 {
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+
+.footer-brand p {
+    color: #c7d4ca;
+    line-height: 1.7;
+    font-size: 14px;
+    max-width: 380px;
+}
+
+.footer h3 {
+    font-size: 17px;
+    margin-bottom: 16px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #c7d4ca;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-contact p {
+    color: #c7d4ca;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: auto;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+
+    padding: 18px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #b7c7bb;
+    font-size: 13px;
+}
+
+
+/* MOBILE FOOTER */
+
+@media (max-width: 700px) {
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 35px 25px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+
+}
+
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .nav-container {
+        padding: 14px 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .back-home-btn {
+        padding: 9px 12px;
+        font-size: 14px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+}
+
+/* =========================
+   PROFESSIONAL NAVBAR
+========================= */
+
+.navbar {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #e5ebe5;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.nav-container {
+    max-width: 1250px;
+    margin: auto;
+    min-height: 82px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 40px;
+}
+
+
+/* LOGO */
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    text-decoration: none;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    color: #294f3a;
+}
+
+
+.logo-icon {
+    font-size: 30px;
+}
+
+
+/* NAV LINKS */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+
+    margin-left: 80px;
+}
+
+
+.nav-links a {
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    color: #42544a;
+
+    transition: 0.3s;
+}
+
+
+.nav-links a:hover {
+    color: #2f7d4a;
+}
+
+
+/* BACK HOME BUTTON */
+
+.back-home-btn {
+    text-decoration: none;
+
+    background: #edf4ef;
+    color: #294f3a;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    padding: 14px 22px;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+
+.back-home-btn:hover {
+    background: #dceadf;
+    transform: translateY(-1px);
+}
+
+
+/* MOBILE NAVBAR */
+
+@media (max-width: 768px) {
+
+    .nav-container {
+        padding: 0 20px;
+        min-height: 70px;
+    }
+
+
+    .nav-logo {
+        font-size: 22px;
+    }
+
+
+    .logo-icon {
+        font-size: 25px;
+    }
+
+
+    .nav-links {
+        display: none;
+    }
+
+
+    .back-home-btn {
+        font-size: 13px;
+        padding: 10px 14px;
+    }
+
+}
+
+/* ===============================
+   IRRIGATION ADVISER
+================================ */
+
+.irrigation-page {
+    min-height: 100vh;
+    padding: 60px 8%;
+    background: #f4f8f2;
+}
+
+.irrigation-heading {
+    max-width: 800px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+
+.irrigation-heading h1 {
+    font-size: 42px;
+    color: #1f3b25;
+    margin-bottom: 12px;
+}
+
+.irrigation-card {
+    max-width: 700px;
+    margin: auto;
+    padding: 35px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.irrigation-group {
+    margin-bottom: 20px;
+}
+
+.irrigation-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #1f3b25;
+}
+
+.irrigation-group select {
+    display: block;
+    width: 100%;
+    height: 55px;
+    padding: 0 15px;
+
+    background-color: white;
+    color: #222;
+
+    border: 1px solid #cfd8cf;
+    border-radius: 12px;
+
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.irrigation-group select:hover {
+    border-color: #2f6b3c;
+}
+
+.irrigation-group select:focus {
+    outline: 2px solid #2f6b3c;
+    border-color: #2f6b3c;
+}
+
+.irrigation-btn {
+    width: 100%;
+    height: 55px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #2f6b3c;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.irrigation-btn:hover {
+    background: #24572f;
+}
+
+.irrigation-result {
+    display: none;
+    margin-top: 25px;
+    padding: 25px;
+
+    text-align: center;
+
+    background: #edf7ef;
+    border-radius: 15px;
+}
+
+.result-icon {
+    font-size: 40px;
+}
+
+@media (max-width: 600px) {
+
+    .irrigation-page {
+        padding: 40px 5%;
+    }
+
+    .irrigation-card {
+        padding: 25px;
+    }
+
+    .irrigation-heading h1 {
+        font-size: 32px;
+    }
+
+}
+/* =================================
+   NEAT RESPONSIVE FOOTER
+================================= */
+
+.footer {
+    background: #183d2a;
+    color: white;
+    margin-top: 0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 30px 35px;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 50px;
+}
+
+.footer-brand h2 {
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+
+.footer-brand p {
+    color: #cbd5d0;
+    line-height: 1.7;
+    max-width: 350px;
+}
+
+.footer h3 {
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #cbd5d0;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-contact p {
+    color: #cbd5d0;
+    margin-bottom: 10px;
+}
+
+.footer-bottom {
+    max-width: none;
+    margin: 0;
+    padding: 20px 8%;
+    border-top: 1px solid #345743;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: #b9c7bd;
+    font-size: 14px;
+}
+
+
+/* TABLET */
+
+@media (max-width: 768px) {
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 40px 25px 30px;
+        gap: 30px;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    .footer-brand p {
+        margin: auto;
+    }
+
+    .footer-links {
+        align-items: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+        padding: 18px 20px;
+    }
+
+}
+
+/* ========================================
+   CROP & FRUIT RECOMMENDATION
+======================================== */
+
+.recommendation-page {
+    min-height: 100vh;
+    padding: 110px 8% 70px;
+    background: #f6faf5;
+}
+
+.recommendation-heading {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 45px;
+}
+
+.recommendation-heading h1 {
+    font-size: 42px;
+    color: #1f4d2b;
+    margin: 12px 0;
+}
+
+.recommendation-card {
+    max-width: 760px;
+    margin: auto;
+    padding: 35px;
+    background: #ffffff;
+    border-radius: 22px;
+    box-shadow: 0 12px 40px rgba(30, 80, 40, 0.12);
+}
+
+.recommendation-group {
+    margin-top: 22px;
+}
+
+.recommendation-group label {
+    display: block;
+    font-weight: 600;
+    color: #28452f;
+    margin-bottom: 8px;
+}
+
+.recommendation-group select {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #d5e3d3;
+    border-radius: 10px;
+    background: #f9fcf8;
+    font-size: 15px;
+    outline: none;
+}
+
+.recommendation-group select:focus {
+    border-color: #4d9b52;
+}
+
+.recommendation-btn {
+    width: 100%;
+    margin-top: 30px;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    background: #2e7d32;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.recommendation-btn:hover {
+    background: #1f5f24;
+    transform: translateY(-2px);
+}
+
+.recommendation-result {
+    display: none;
+    margin-top: 30px;
+    padding: 30px;
+    text-align: center;
+    background: #f1f8ee;
+    border: 1px solid #c9e5c5;
+    border-radius: 18px;
+}
+
+.result-label {
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #438746;
+}
+
+.recommended-name {
+    margin: 15px 0;
+    font-size: 30px;
+    font-weight: bold;
+    color: #1e6b2d;
+}
+
+.recommendation-reason {
+    color: #555;
+    line-height: 1.7;
+}
+
+.recommendation-tips {
+    margin-top: 25px;
+    padding: 20px;
+    text-align: left;
+    background: white;
+    border-radius: 14px;
+}
+
+.recommendation-tips h3 {
+    color: #23652c;
+    margin-bottom: 15px;
+}
+
+.recommendation-tips li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.important-note {
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 10px;
+    background: #fff7d9;
+    color: #765b00;
+    font-size: 14px;
+}
+
+.recommendation-info {
+    display: flex;
+    gap: 25px;
+    max-width: 1100px;
+    margin: 55px auto 0;
+}
+
+.info-card {
+    flex: 1;
+    padding: 28px;
+    text-align: center;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(30, 80, 40, 0.08);
+}
+
+.info-card div {
+    font-size: 36px;
+}
+
+.info-card h3 {
+    color: #255c2b;
+    margin: 15px 0 10px;
+}
+
+.info-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+
+    .recommendation-page {
+        padding: 100px 5% 50px;
+    }
+
+    .recommendation-heading h1 {
+        font-size: 30px;
+    }
+
+    .recommendation-card {
+        padding: 22px;
+    }
+
+    .recommendation-info {
+        flex-direction: column;
+    }
+
+}
+
+/* ========================================
+   CROP RECOMMENDATION DETAILS
+======================================== */
+
+.recommendation-details {
+    display: flex;
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.detail-box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px;
+    text-align: left;
+    background: white;
+    border: 1px solid #d9ead7;
+    border-radius: 14px;
+}
+
+.detail-box span {
+    font-size: 30px;
+}
+
+.detail-box small {
+    display: block;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    color: #66806b;
+}
+
+.detail-box p {
+    margin: 5px 0 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #285b31;
+}
+
+@media (max-width: 600px) {
+
+    .recommendation-details {
+        flex-direction: column;
+    }
+
+}
+
+/* ========================================
+   DARK MODE - ALL PAGES
+======================================== */
+
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+body.dark-mode .navbar,
+body.dark-mode .footer,
+body.dark-mode .fertilizer-card,
+body.dark-mode .irrigation-card,
+body.dark-mode .recommendation-card,
+body.dark-mode .recommendation-result,
+body.dark-mode .info-card,
+body.dark-mode .detail-box {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode label,
+body.dark-mode small {
+    color: white;
+}
+
+body.dark-mode select,
+body.dark-mode input {
+    background-color: #2a2a2a;
+    color: white;
+    border-color: #555;
+}
+
+body.dark-mode .recommendation-tips {
+    background-color: #252525;
+}
+
+/* ========================================
+   GOVERNMENT SCHEMES PAGE
+======================================== */
+
+
+/* HERO */
+
+.schemes-hero {
+
+    min-height: 320px;
+
+    padding: 80px 10%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef9f0,
+            #d8f0df
+        );
+
+}
+
+
+.schemes-hero-content {
+
+    max-width: 650px;
+
+}
+
+
+.schemes-badge {
+
+    display: inline-block;
+
+    padding: 10px 18px;
+
+    border-radius: 30px;
+
+    background: white;
+
+    color: #2e7d32;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    box-shadow:
+        0 5px 15px
+        rgba(0, 0, 0, 0.05);
+
+}
+
+
+.schemes-hero h1 {
+
+    margin-top: 20px;
+
+    font-size: 48px;
+
+    color: #1f3d2b;
+
+}
+
+
+.schemes-hero h1 span {
+
+    color: #2e7d32;
+
+}
+
+
+.schemes-hero p {
+
+    margin-top: 15px;
+
+    max-width: 600px;
+
+    color: #61736a;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+}
+
+
+.schemes-hero-icon {
+
+    font-size: 110px;
+
+    animation:
+        floatSchemeIcon
+        3s
+        ease-in-out
+        infinite;
+
+}
+
+
+@keyframes floatSchemeIcon {
+
+    0% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-15px);
+
+    }
+
+    100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+
+/* MAIN SECTION */
+
+.schemes-section {
+
+    padding: 80px 10%;
+
+    background: #f7faf8;
+
+}
+
+
+.section-heading {
+
+    text-align: center;
+
+    margin-bottom: 50px;
+
+}
+
+
+.section-heading p {
+
+    color: #2e7d32;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+.section-heading h2 {
+
+    margin-top: 10px;
+
+    font-size: 36px;
+
+    color: #1f3d2b;
+
+}
+
+
+.section-heading span {
+
+    display: block;
+
+    margin-top: 10px;
+
+    color: #68786f;
+
+}
+
+
+
+/* SCHEME GRID */
+
+.schemes-grid {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+
+    gap: 25px;
+
+}
+
+
+
+/* SCHEME CARD */
+
+.scheme-card {
+
+    background: white;
+
+    border-radius: 22px;
+
+    padding: 28px;
+
+    border:
+        1px
+        solid
+        #e2ebe5;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.05);
+
+    transition:
+        0.3s;
+
+}
+
+
+.scheme-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    box-shadow:
+        0 18px 35px
+        rgba(46, 125, 50, 0.12);
+
+}
+
+
+
+/* CARD TOP */
+
+.scheme-card-top {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+
+.scheme-icon {
+
+    width: 52px;
+
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+
+    border-radius: 16px;
+
+    background:
+        #edf7ef;
+
+}
+
+
+.scheme-tag {
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    background:
+        #e8f5e9;
+
+    color:
+        #2e7d32;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+}
+
+
+
+/* TEXT */
+
+.scheme-card h3 {
+
+    margin-top: 25px;
+
+    font-size: 21px;
+
+    color:
+        #1f3d2b;
+
+}
+
+
+.scheme-description {
+
+    margin-top: 10px;
+
+    color:
+        #68786f;
+
+    line-height:
+        1.6;
+
+}
+
+
+
+/* BENEFIT */
+
+.scheme-benefit {
+
+    margin-top: 22px;
+
+    padding: 16px;
+
+    display: flex;
+
+    gap: 12px;
+
+    align-items: center;
+
+    border-radius: 14px;
+
+    background:
+        #f0f8f2;
+
+}
+
+
+.scheme-benefit span {
+
+    font-size:
+        25px;
+
+}
+
+
+.scheme-benefit small {
+
+    color:
+        #7a8b80;
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        1px;
+
+}
+
+
+.scheme-benefit p {
+
+    margin-top:
+        4px;
+
+    font-weight:
+        bold;
+
+    color:
+        #2e7d32;
+
+}
+
+
+
+/* DETAILS */
+
+.scheme-details {
+
+    margin-top:
+        20px;
+
+}
+
+
+.scheme-detail {
+
+    display: flex;
+
+    gap:
+        12px;
+
+    margin-bottom:
+        16px;
+
+}
+
+
+.scheme-detail > span {
+
+    font-size:
+        18px;
+
+}
+
+
+.scheme-detail small {
+
+    color:
+        #7a8b80;
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        1px;
+
+}
+
+
+.scheme-detail p {
+
+    margin-top:
+        4px;
+
+    color:
+        #48584f;
+
+    font-size:
+        14px;
+
+    line-height:
+        1.5;
+
+}
+
+
+
+/* APPLY BUTTON */
+
+.scheme-apply-btn {
+
+    display: block;
+
+    margin-top:
+        20px;
+
+    padding:
+        14px;
+
+    text-align:
+        center;
+
+    border-radius:
+        12px;
+
+    text-decoration:
+        none;
+
+    background:
+        #2e7d32;
+
+    color:
+        white;
+
+    font-weight:
+        bold;
+
+    transition:
+        0.3s;
+
+}
+
+
+.scheme-apply-btn:hover {
+
+    background:
+        #1f5d24;
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+
+/* MOBILE RESPONSIVE */
+
+@media (
+    max-width:
+    900px
+) {
+
+    .schemes-grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+
+    }
+
+}
+
+
+@media (
+    max-width:
+    600px
+) {
+
+    .schemes-hero {
+
+        padding:
+            60px
+            6%;
+
+        flex-direction:
+            column;
+
+        text-align:
+            center;
+
+    }
+
+
+    .schemes-hero h1 {
+
+        font-size:
+            38px;
+
+    }
+
+
+    .schemes-hero-icon {
+
+        margin-top:
+            30px;
+
+        font-size:
+            80px;
+
+    }
+
+
+    .schemes-section {
+
+        padding:
+            60px
+            6%;
+
+    }
+
+
+    .schemes-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .section-heading h2 {
+
+        font-size:
+            28px;
+
+    }
+
+}
+
+.more-tools-menu {
+
+    display: flex;
+
+    gap: 15px;
+
+    justify-content: center;
+
+    margin: 20px;
+
+}
+
+
+/* NORMAL LIGHT BUTTON STYLE */
+
+.more-tools-menu a {
+
+    background: linear-gradient(
+        135deg,
+        #eef4f1,
+        #dfe9e4
+    );
+
+    color: #294d3b;
+
+    padding: 15px 25px;
+
+    border-radius: 14px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+
+    display: inline-block;
+
+    border: 1px solid #d6e1db;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.06);
+
+}
+
+
+/* HOVER */
+
+.more-tools-menu a:hover {
+
+    background: linear-gradient(
+        135deg,
+        #e2ede6,
+        #d4e3db
+    );
+
+    color: #1e4c31;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 20px rgba(30, 80, 45, 0.12);
+
+}

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>KrishiSetu | Location & Weather</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+
+    <div class="nav-container">
+
+
+        <!-- LOGO -->
+
+        <a href="index.html" class="nav-logo">
+
+            <span class="logo-icon">
+                🌾
+            </span>
+
+            <span class="logo-text">
+                KrishiSetu
+            </span>
+
+        </a>
+
+
+
+        <!-- BACK BUTTON -->
+
+        <a
+            href="index.html"
+            class="back-home-btn"
+        >
+            ← Back to Home
+        </a>
+
+
+    </div>
+
+</nav>
+
+
+<!-- ================= MAIN PAGE ================= -->
+<!-- ================= MAIN PAGE ================= -->
+
+<main>
+
+    <section class="location-weather-page">
+
+
+        <!-- PAGE HEADING -->
+
+        <div class="location-weather-heading">
+
+            <p class="tool-tag">
+                SMART FARM TOOL
+            </p>
+
+            <h1>
+                Location & Weather
+            </h1>
+
+            <p class="tool-subtitle">
+                Select your farm location to view your local weather.
+            </p>
+
+        </div>
+
+
+
+        <!-- MAIN LOCATION + WEATHER AREA -->
+
+        <div class="location-weather-grid">
+
+
+            <!-- ========== LOCATION CARD ========== -->
+
+            <div class="location-tool-card">
+
+
+                <!-- LOCATION FORM -->
+
+                <div id="locationForm">
+
+
+                    <!-- CARD HEADING -->
+
+                    <div class="card-heading">
+
+                        <div class="card-icon">
+                            📍
+                        </div>
+
+                        <div>
+
+                            <h2>
+                                Select Farm Location
+                            </h2>
+
+                            <p>
+                                Choose your farm location
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- STATE -->
+
+                    <div class="location-group">
+
+                        <label>
+                            State
+                        </label>
+
+                        <select id="state">
+
+                            <option value="">
+                                Select State
+                            </option>
+
+                            <option value="Maharashtra">
+                                Maharashtra
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- DISTRICT -->
+
+                    <div class="location-group">
+
+                        <label>
+                            District
+                        </label>
+
+                        <select
+                            id="district"
+                            disabled
+                        >
+
+                            <option value="">
+                                Select District
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- TALUKA -->
+
+                    <div class="location-group">
+
+                        <label>
+                            Taluka
+                        </label>
+
+                        <select
+                            id="taluka"
+                            disabled
+                        >
+
+                            <option value="">
+                                Select Taluka
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- VILLAGE -->
+
+                    <div class="location-group">
+
+                        <label>
+                            Village
+                        </label>
+
+                        <select
+                            id="village"
+                            disabled
+                        >
+
+                            <option value="">
+                                Select Village
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- SAVE BUTTON -->
+
+                    <button
+                        type="button"
+                        class="save-location-btn"
+                        onclick="saveFarmLocation()"
+                    >
+
+                        📍 Save Farm Location
+
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- SAVED LOCATION -->
+
+                <div
+                    class="saved-location-card"
+                    id="savedLocationCard"
+                    style="display: none;"
+                >
+
+                    <div class="saved-location-icon">
+                        📍
+                    </div>
+
+
+                    <p class="location-label">
+                        YOUR FARM LOCATION
+                    </p>
+
+
+                    <div id="savedLocationText">
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="change-location-btn"
+                        onclick="changeFarmLocation()"
+                    >
+
+                        Change Location
+
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ========== WEATHER CARD ========== -->
+
+            <div class="weather-tool-card">
+
+
+                <div class="card-heading">
+
+                    <div class="card-icon">
+                        🌤️
+                    </div>
+
+                    <div>
+
+                        <h2>
+                            Current Weather
+                        </h2>
+
+                        <p>
+                            Weather for your selected location
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="weather-main">
+
+
+                    <div id="weatherIcon">
+                        🌤️
+                    </div>
+
+
+                    <div id="weatherTemperature">
+                        --
+                    </div>
+
+
+                    <div id="weatherCondition">
+                        Select your location
+                    </div>
+
+
+                    <div id="weatherLocation">
+                        Your village will appear here
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- REQUIRED FOR JAVASCRIPT -->
+
+        <div
+            id="locationWeatherResults"
+            style="display: none;"
+        >
+        </div>
+
+
+    </section>
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+
+        <!-- BRAND -->
+
+        <div class="footer-brand">
+
+            <h2>
+                🌾 KrishiSetu
+            </h2>
+
+            <p>
+                Smart digital solutions designed to help
+                farmers make better decisions.
+            </p>
+
+        </div>
+
+
+
+       
+
+
+        <!-- CONTACT -->
+
+        <div class="footer-contact">
+
+            <h3>
+                Smart Farming
+            </h3>
+
+            <p>
+                📍 Maharashtra, India
+            </p>
+
+            <p>
+                🌱 Technology for Farmers
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- FOOTER BOTTOM -->
+
+
+</footer>
+
+
+
+<!-- JAVASCRIPT -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

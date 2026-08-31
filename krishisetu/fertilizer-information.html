@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Fertilizer Information | KrishiSetu
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f6f8f4;
+            color: #24352b;
+        }
+
+        /* PAGE HERO */
+
+        .fertilizer-hero {
+
+            min-height: 340px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(18, 76, 46, 0.95),
+                    rgba(45, 120, 70, 0.88)
+                );
+
+            color: white;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 70px 9%;
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .fertilizer-hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 350px;
+
+            height: 350px;
+
+            border-radius: 50%;
+
+            background: rgba(255,255,255,0.06);
+
+            right: -100px;
+
+            top: -100px;
+
+        }
+
+
+        .fertilizer-hero-content {
+
+            max-width: 700px;
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+
+        .fertilizer-badge {
+
+            display: inline-block;
+
+            padding: 8px 16px;
+
+            border-radius: 50px;
+
+            background: rgba(255,255,255,0.15);
+
+            font-size: 12px;
+
+            font-weight: bold;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 20px;
+
+        }
+
+
+        .fertilizer-hero h1 {
+
+            font-size: 52px;
+
+            margin: 0 0 15px;
+
+        }
+
+
+        .fertilizer-hero h1 span {
+
+            color: #bff6a8;
+
+        }
+
+
+        .fertilizer-hero p {
+
+            font-size: 17px;
+
+            line-height: 1.7;
+
+            max-width: 600px;
+
+            color: #e5f5e8;
+
+        }
+
+
+        .fertilizer-hero-icon {
+
+            font-size: 130px;
+
+            z-index: 2;
+
+            animation: float 3s ease-in-out infinite;
+
+        }
+
+
+        @keyframes float {
+
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+
+        }
+
+
+
+        /* INFORMATION SECTION */
+
+        .fertilizer-section {
+
+            padding: 80px 9%;
+
+        }
+
+
+        .fertilizer-heading {
+
+            text-align: center;
+
+            margin-bottom: 50px;
+
+        }
+
+
+        .fertilizer-heading p {
+
+            color: #4f8a55;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            letter-spacing: 2px;
+
+        }
+
+
+        .fertilizer-heading h2 {
+
+            font-size: 36px;
+
+            margin: 12px 0;
+
+            color: #1e4c31;
+
+        }
+
+
+        .fertilizer-heading span {
+
+            color: #6a776e;
+
+        }
+
+
+
+        /* GRID */
+
+        .fertilizer-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(290px, 1fr));
+
+            gap: 25px;
+
+        }
+
+
+
+        /* CARD */
+
+        .fertilizer-card {
+
+            background: white;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 10px 30px rgba(0,0,0,0.07);
+
+            border:
+                1px solid #e5ece6;
+
+            transition: 0.3s;
+
+        }
+
+
+        .fertilizer-card:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 18px 40px rgba(30,80,45,0.15);
+
+        }
+
+
+
+        /* CARD IMAGE */
+
+        .fertilizer-image {
+
+            height: 160px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #e6f5e8,
+                    #d2ead5
+                );
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 75px;
+
+        }
+
+
+
+        /* CARD CONTENT */
+
+        .fertilizer-content {
+
+            padding: 25px;
+
+        }
+
+
+        .fertilizer-tag {
+
+            display: inline-block;
+
+            background: #e8f6e9;
+
+            color: #2e7d32;
+
+            padding: 6px 12px;
+
+            border-radius: 30px;
+
+            font-size: 11px;
+
+            font-weight: bold;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .fertilizer-content h3 {
+
+            font-size: 22px;
+
+            margin: 5px 0 18px;
+
+            color: #214b31;
+
+        }
+
+
+
+        /* INFORMATION BOXES */
+
+        .fert-info {
+
+            display: flex;
+
+            gap: 12px;
+
+            margin-bottom: 16px;
+
+            padding-bottom: 14px;
+
+            border-bottom:
+                1px solid #edf1ed;
+
+        }
+
+
+        .fert-info-icon {
+
+            width: 38px;
+
+            height: 38px;
+
+            border-radius: 10px;
+
+            background: #eef8ef;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 18px;
+
+            flex-shrink: 0;
+
+        }
+
+
+        .fert-info small {
+
+            display: block;
+
+            font-size: 10px;
+
+            color: #7a8a7d;
+
+            font-weight: bold;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        .fert-info p {
+
+            margin: 0;
+
+            color: #425247;
+
+            font-size: 13px;
+
+            line-height: 1.5;
+
+        }
+
+
+
+        /* BOTTOM TIP */
+
+        .fertilizer-note {
+
+            margin-top: 50px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #1e5635,
+                    #347a4b
+                );
+
+            color: white;
+
+            padding: 35px;
+
+            border-radius: 22px;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 20px;
+
+        }
+
+
+        .fertilizer-note-icon {
+
+            font-size: 45px;
+
+        }
+
+
+        .fertilizer-note h3 {
+
+            margin: 0 0 8px;
+
+        }
+
+
+        .fertilizer-note p {
+
+            margin: 0;
+
+            color: #dcf3df;
+
+            line-height: 1.6;
+
+        }
+
+
+
+        /* FOOTER */
+
+        .fert-footer {
+
+            background: #183d29;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 35px;
+
+        }
+
+
+        .fert-footer h3 {
+
+            margin: 0 0 10px;
+
+            font-size: 24px;
+
+        }
+
+
+        .fert-footer p {
+
+            margin: 0;
+
+            color: #c6d8ca;
+
+        }
+
+
+
+        /* MOBILE */
+
+        @media(max-width: 768px) {
+
+            .fertilizer-hero {
+
+                flex-direction: column;
+
+                text-align: center;
+
+                padding: 60px 7%;
+
+            }
+
+
+            .fertilizer-hero h1 {
+
+                font-size: 38px;
+
+            }
+
+
+            .fertilizer-hero-icon {
+
+                margin-top: 25px;
+
+                font-size: 90px;
+
+            }
+
+
+            .fertilizer-section {
+
+                padding: 60px 6%;
+
+            }
+
+
+            .fertilizer-note {
+
+                flex-direction: column;
+
+                text-align: center;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            🌾 KrishiSetu
+
+        </div>
+
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+
+            <li>
+                <a href="index.html#dashboard">
+                    Dashboard
+                </a>
+            </li>
+
+
+            <li>
+                <a href="farming-tools.html">
+                    Farming Tools
+                </a>
+            </li>
+
+        </ul>
+
+
+        <button id="darkModeBtn">
+            🌙
+        </button>
+
+    </nav>
+
+
+
+    <!-- HERO -->
+
+    <section class="fertilizer-hero">
+
+
+        <div class="fertilizer-hero-content">
+
+
+            <div class="fertilizer-badge">
+
+                🌱 SMART FARMING GUIDE
+
+            </div>
+
+
+            <h1>
+
+                Fertilizer
+                <span>
+                    Information
+                </span>
+
+            </h1>
+
+
+            <p>
+
+                Learn about commonly used fertilizers,
+                their purpose, suitable crops and the
+                correct stage of application.
+
+            </p>
+
+
+        </div>
+
+
+        <div class="fertilizer-hero-icon">
+
+            🧪
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- MAIN SECTION -->
+
+    <section class="fertilizer-section">
+
+
+        <div class="fertilizer-heading">
+
+
+            <p>
+
+                FARMING INFORMATION
+
+            </p>
+
+
+            <h2>
+
+                Know Your Fertilizers
+
+            </h2>
+
+
+            <span>
+
+                Learn what each fertilizer is used for and when to apply it.
+
+            </span>
+
+
+        </div>
+
+
+
+        <div class="fertilizer-grid">
+
+
+
+            <!-- 1 UREA -->
+
+            <div class="fertilizer-card">
+
+                <div class="fertilizer-image">
+                    🌿
+                </div>
+
+
+                <div class="fertilizer-content">
+
+
+                    <span class="fertilizer-tag">
+                        NITROGEN FERTILIZER
+                    </span>
+
+
+                    <h3>
+                        Urea
+                    </h3>
+
+
+                    <div class="fert-info">
+
+                        <div class="fert-info-icon">
+                            🎯
+                        </div>
+
+                        <div>
+
+                            <small>
+                                USED FOR
+                            </small>
+
+                            <p>
+                                Provides nitrogen for green leaves
+                                and vegetative plant growth.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="fert-info">
+
+                        <div class="fert-info-icon">
+                            📅
+                        </div>
+
+                        <div>
+
+                            <small>
+                                WHEN TO USE
+                            </small>
+
+                            <p>
+                                Used during the active growth stage
+                                according to crop requirements.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="fert-info">
+
+                        <div class="fert-info-icon">
+                            🌾
+                        </div>
+
+                        <div>
+
+                            <small>
+                                COMMON CROPS
+                            </small>
+
+                            <p>
+                                Rice, wheat, maize and sugarcane.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 2 DAP -->
+
+            <div class="fertilizer-card">
+
+                <div class="fertilizer-image">
+                    💎
+                </div>
+
+
+                <div class="fertilizer-content">
+
+
+                    <span class="fertilizer-tag">
+                        NITROGEN + PHOSPHORUS
+                    </span>
+
+
+                    <h3>
+                        DAP
+                    </h3>
+
+
+                    <div class="fert-info">
+
+                        <div class="fert-info-icon">
+                            🎯
+                        </div>
+
+                        <div>
+
+                            <small>
+                                USED FOR
+                            </small>
+
+                            <p>
+                                Supports early root development
+                                and healthy plant establishment.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="fert-info">
+
+                        <div class="fert-info-icon">
+                            📅
+                        </div>
+
+                        <div>
+
+                            <small>
+                                WHEN TO USE
+                            </small>
+
+                            <p>
+                                Commonly applied during sowing
+                                or before planting.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="fert-info">
+
+                        <div class="fert-info-icon">
+                            🌾
+                        </div>
+
+                        <div>
+
+                            <small>
+                                COMMON CROPS
+                            </small>
+
+                            <p>
+                                Wheat, maize, pulses and oilseeds.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 3 NPK -->
+
+            <div class="fertilizer-card">
+
+                <div class="fertilizer-image">
+                    🌈
+                </div>
+
+
+                <div class="fertilizer-content">
+
+
+                    <span class="fertilizer-tag">
+                        BALANCED NUTRIENTS
+                    </span>
+
+
+                    <h3>
+                        NPK Fertilizer
+                    </h3>
+
+
+                    <div class="fert-info">
+
+                        <div class="fert-info-icon">
+                            🎯
+                        </div>
+
+                        <div>
+
+                            <small>
+                                USED FOR
+                            </small>
+
+                            <p>
+                                Provides nitrogen, phosphorus
+                                and potassium to plants.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="fert-info">
+
+                        <div class="fert-info-icon">
+                            📅
+                        </div>
+
+                        <div>
+
+                            <small>
+                                WHEN TO USE
+                            </small>
+
+                            <p>
+                                Used according to crop stage
+                                and nutrient requirements.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="fert-info">
+
+                        <div class="fert-info-icon">
+                            🌾
+                        </div>
+
+                        <div>
+
+                            <small>
+                                COMMON CROPS
+                            </small>
+
+                            <p>
+                                Vegetables, fruits and field crops.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 4 MOP -->
+
+            <div class="fertilizer-card">
+
+                <div class="fertilizer-image">
+                    🟣
+                </div>
+
+
+                <div class="fertilizer-content">
+
+
+                    <span class="fertilizer-tag">
+                        POTASSIUM FERTILIZER
+                    </span>
+
+
+                    <h3>
+                        MOP
+                    </h3>
+
+
+                    <div class="fert-info">
+
+                        <div class="fert-info-icon">
+                            🎯
+                        </div>
+
+                        <div>
+
+                            <small>
+                                USED FOR
+                            </small>
+
+                            <p>
+                                Helps improve crop quality
+                                and plant strength.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="fert-info">
+
+                        <div class="fert-info-icon">
+                            📅
+                        </div>
+
+                        <div>
+
+                            <small>
+                                WHEN TO USE
+                            </small>
+
+                            <p>
+                                Applied according to soil and
+                                crop potassium requirements.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="fert-info">
+
+                        <div class="fert-info-icon">
+                            🌾
+                        </div>
+
+                        <div>
+
+                            <small>
+                                COMMON CROPS
+                            </small>
+
+                            <p>
+                                Sugarcane, banana and potato.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 5 SSP -->
+
+            <div class="fertilizer-card">
+
+                <div class="fertilizer-image">
+                    ⚪
+                </div>
+
+
+                <div class="fertilizer-content">
+
+
+                    <span class="fertilizer-tag">
+                        PHOSPHORUS FERTILIZER
+                    </span>
+
+
+                    <h3>
+                        SSP
+                    </h3>
+
+
+                    <div class="fert-info">
+
+                        <div class="fert-info-icon">
+                            🎯
+                        </div>
+
+                        <div>
+
+                            <small>
+                                USED FOR
+                            </small>
+
+                            <p>
+                                Supports root growth and
+                                flowering development.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="fert-info">
+
+                        <div class="fert-info-icon">
+                            📅
+                        </div>
+
+                        <div>
+
+                            <small>
+                                WHEN TO USE
+                            </small>
+
+                            <p>
+                                Usually applied before
+                                or during sowing.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="fert-info">
+
+                        <div class="fert-info-icon">
+                            🌾
+                        </div>
+
+                        <div>
+
+                            <small>
+                                COMMON CROPS
+                            </small>
+
+                            <p>
+                                Oilseeds, pulses and vegetables.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- 6 ZINC -->
+
+           
+
+
+                <div class="fertilizer-content">
+
+
+                   
+

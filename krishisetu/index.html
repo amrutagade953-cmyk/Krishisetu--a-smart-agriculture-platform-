@@ -1,0 +1,2534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        KrishiSetu | Smart Farmer Dashboard
+    </title>
+
+
+    <!-- Existing CSS -->
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+
+    <!-- INDEX PAGE PROFESSIONAL UI -->
+    <style>
+
+        /* =========================
+           INDEX PAGE RESET
+        ========================= */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background:
+                linear-gradient(
+                    180deg,
+                    #f8fbf6 0%,
+                    #f1f7ee 45%,
+                    #ffffff 100%
+                );
+            color: #183d2a;
+            overflow-x: hidden;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        .navbar {
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            width: 100%;
+            box-sizing: border-box;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 14px 7%;
+
+            background:
+                rgba(255, 255, 255, 0.92);
+
+            backdrop-filter: blur(18px);
+
+            border-bottom:
+                1px solid rgba(31, 93, 57, 0.12);
+
+            box-shadow:
+                0 8px 30px rgba(26, 70, 44, 0.06);
+
+        }
+
+
+        .logo {
+
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+
+            color: #245b3a;
+
+            white-space: nowrap;
+
+        }
+
+
+        .nav-links {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 8px;
+
+            margin: 0;
+            padding: 0;
+
+            list-style: none;
+
+        }
+
+
+        .nav-links a {
+
+            display: inline-flex;
+            align-items: center;
+
+            padding: 10px 14px;
+
+            border-radius: 10px;
+
+            color: #41604d;
+            text-decoration: none;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            transition: 0.25s ease;
+
+        }
+
+
+        .nav-links a:hover {
+
+            background: #eef7ef;
+            color: #1f5d39;
+
+            transform: translateY(-1px);
+
+        }
+
+
+        .nav-links li:first-child a {
+
+            color: #8b5a12;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff6df,
+                    #fffaf0
+                );
+
+            border:
+                1px solid rgba(218, 159, 41, 0.22);
+
+        }
+
+
+        /* =========================
+           MORE TOOLS
+        ========================= */
+
+        .tools-menu {
+
+            position: relative;
+
+            margin-left: 5px;
+
+        }
+
+
+        .tools-btn {
+
+            padding: 10px 16px;
+
+            border: none;
+            border-radius: 10px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #e9f5ec,
+                    #f4faf5
+                );
+
+            color: #275e3b;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition: 0.25s ease;
+
+        }
+
+
+        .tools-btn:hover {
+
+            transform: translateY(-2px);
+
+            background: #dcefe1;
+
+            box-shadow:
+                0 8px 20px rgba(31, 93, 57, 0.12);
+
+        }
+
+
+        .tools-dropdown {
+
+            position: absolute;
+
+            top: calc(100% + 12px);
+            right: 0;
+
+            min-width: 255px;
+
+            padding: 10px;
+
+            border-radius: 18px;
+
+            background: white;
+
+            border:
+                1px solid rgba(31, 93, 57, 0.1);
+
+            box-shadow:
+                0 20px 45px rgba(0, 0, 0, 0.14);
+
+        }
+
+
+        .tools-dropdown a {
+
+            display: flex;
+            align-items: center;
+
+            padding: 14px;
+
+            margin-bottom: 4px;
+
+            border-radius: 12px;
+
+            color: #294b37;
+
+            text-decoration: none;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            transition: 0.2s ease;
+
+        }
+
+
+        .tools-dropdown a:hover {
+
+            background: #eff8f1;
+
+            color: #1f6a3d;
+
+            transform: translateX(4px);
+
+        }
+
+
+        /* =========================
+           DARK MODE BUTTON
+        ========================= */
+
+        #darkModeBtn {
+
+            width: 44px;
+            height: 44px;
+
+            border: none;
+            border-radius: 50%;
+
+            background: #f0f6f1;
+
+            font-size: 17px;
+
+            cursor: pointer;
+
+            transition: 0.25s ease;
+
+        }
+
+
+        #darkModeBtn:hover {
+
+            transform: rotate(15deg);
+
+            background: #e2f0e4;
+
+        }
+
+
+        /* =========================
+           USER MENU
+        ========================= */
+
+        .user-menu {
+
+            position: relative;
+
+            display: flex;
+            align-items: center;
+
+        }
+
+
+        .login-nav-btn {
+
+            display: inline-flex;
+            align-items: center;
+
+            padding: 10px 18px;
+
+            border-radius: 10px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #24613b,
+                    #3f8c55
+                );
+
+            color: white;
+
+            text-decoration: none;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            box-shadow:
+                0 8px 18px rgba(31, 93, 57, 0.18);
+
+            transition: 0.25s ease;
+
+        }
+
+
+        .login-nav-btn:hover {
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 12px 25px rgba(31, 93, 57, 0.25);
+
+        }
+
+
+        .dropdown-menu {
+
+            position: absolute;
+
+            top: 55px;
+            right: 0;
+
+            min-width: 200px;
+
+            padding: 12px;
+
+            background: white;
+
+            border-radius: 16px;
+
+            box-shadow:
+                0 15px 40px rgba(0, 0, 0, 0.14);
+
+            border:
+                1px solid rgba(0, 0, 0, 0.06);
+
+        }
+
+
+        .dropdown-menu a,
+        .dropdown-menu button {
+
+            display: block;
+
+            width: 100%;
+
+            padding: 10px;
+
+            margin-top: 6px;
+
+            border: none;
+            border-radius: 8px;
+
+            background: transparent;
+
+            color: #345243;
+
+            text-align: left;
+
+            font-size: 14px;
+
+            cursor: pointer;
+
+            text-decoration: none;
+
+        }
+
+
+        .dropdown-menu a:hover,
+        .dropdown-menu button:hover {
+
+            background: #f1f8f2;
+
+        }
+
+
+        .user-name {
+
+            padding: 10px;
+
+            border-radius: 10px;
+
+            background: #eff8f1;
+
+            font-weight: 700;
+
+            color: #245c3a;
+
+        }
+
+
+        /* =========================
+           HERO SECTION
+        ========================= */
+
+        .hero {
+
+            position: relative;
+
+            min-height: 520px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 50px;
+
+            padding: 80px 9%;
+
+            box-sizing: border-box;
+
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at 15% 20%,
+                    rgba(169, 219, 160, 0.3),
+                    transparent 35%
+                ),
+
+                radial-gradient(
+                    circle at 85% 50%,
+                    rgba(255, 211, 117, 0.2),
+                    transparent 30%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #f8fcf7,
+                    #e9f5e8
+                );
+
+        }
+
+
+        .hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 450px;
+            height: 450px;
+
+            right: -100px;
+            bottom: -200px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(94, 160, 95, 0.08);
+
+        }
+
+
+        .hero-content {
+
+            position: relative;
+            z-index: 2;
+
+            max-width: 680px;
+
+        }
+
+
+        .small-title {
+
+            display: inline-block;
+
+            padding: 9px 15px;
+
+            margin-bottom: 18px;
+
+            border-radius: 30px;
+
+            background: #e2f2e3;
+
+            color: #327145;
+
+            font-size: 11px;
+            font-weight: 800;
+
+            letter-spacing: 1.5px;
+
+        }
+
+
+        .hero h1 {
+
+            margin: 0;
+
+            font-size: clamp(
+                42px,
+                6vw,
+                74px
+            );
+
+            line-height: 1.05;
+
+            color: #183d2a;
+
+            letter-spacing: -2px;
+
+        }
+
+
+        .hero h1 span {
+
+            display: block;
+
+            color: #d48c1f;
+
+        }
+
+
+        .hero-content > p:not(.small-title) {
+
+            max-width: 600px;
+
+            margin-top: 25px;
+
+            color: #52695b;
+
+            font-size: 18px;
+
+            line-height: 1.8;
+
+        }
+
+
+        .explore-btn {
+
+            margin-top: 18px;
+
+            padding: 16px 25px;
+
+            border: none;
+            border-radius: 12px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #225e3a,
+                    #3e8c55
+                );
+
+            color: white;
+
+            font-size: 15px;
+            font-weight: 700;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 15px 30px rgba(31, 93, 57, 0.2);
+
+            transition: 0.25s ease;
+
+        }
+
+
+        .explore-btn:hover {
+
+            transform: translateY(-3px);
+
+        }
+
+
+        .hero-image {
+
+            position: relative;
+            z-index: 2;
+
+            width: 260px;
+            height: 260px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #fffdf4,
+                    #e7f5e9
+                );
+
+            border:
+                10px solid rgba(255, 255, 255, 0.6);
+
+            box-shadow:
+                0 30px 60px rgba(45, 100, 59, 0.18);
+
+            font-size: 120px;
+
+        }
+
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        .section {
+
+            padding: 85px 8%;
+
+        }
+
+
+        .section-title {
+
+            text-align: center;
+
+            margin-bottom: 45px;
+
+        }
+
+
+        .section-title p {
+
+            margin-bottom: 10px;
+
+            color: #6f8f78;
+
+            font-size: 11px;
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+        }
+
+
+        .section-title h2 {
+
+            margin: 0;
+
+            font-size: 34px;
+
+            color: #1e402c;
+
+        }
+
+
+        /* =========================
+           DASHBOARD CARDS
+        ========================= */
+
+        .farmer-glance-section {
+
+            background: white;
+
+        }
+
+
+        .farmer-glance-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .farmer-glance-card {
+
+            position: relative;
+
+            padding: 26px;
+
+            border-radius: 18px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #ffffff,
+                    #f7fbf7
+                );
+
+            border:
+                1px solid rgba(41, 91, 55, 0.08);
+
+            box-shadow:
+                0 12px 30px rgba(20, 50, 30, 0.06);
+
+            transition: 0.25s ease;
+
+            overflow: hidden;
+
+        }
+
+
+        .farmer-glance-card::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            top: 0;
+
+            width: 5px;
+            height: 100%;
+
+            background:
+                linear-gradient(
+                    #e7b64a,
+                    #4d9860
+                );
+
+            opacity: 0;
+
+            transition: 0.25s ease;
+
+        }
+
+
+        .farmer-glance-card:hover {
+
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 20px 40px rgba(20, 50, 30, 0.1);
+
+        }
+
+
+        .farmer-glance-card:hover::after {
+
+            opacity: 1;
+
+        }
+
+
+        .glance-icon {
+
+            font-size: 28px;
+
+        }
+
+
+        .glance-label {
+
+            margin: 14px 0 7px;
+
+            color: #708078;
+
+            font-size: 13px;
+
+        }
+
+
+        .farmer-glance-card h3 {
+
+            margin: 0;
+
+            color: #234b33;
+
+            font-size: 22px;
+
+        }
+
+
+        .farmer-glance-card span {
+
+            display: block;
+
+            margin-top: 6px;
+
+            color: #7a8b80;
+
+            font-size: 12px;
+
+        }
+
+
+        /* =========================
+           MARKET SECTION
+        ========================= */
+
+        .market-section {
+
+            background:
+                linear-gradient(
+                    180deg,
+                    #f4faf3,
+                    #eef6ee
+                );
+
+        }
+
+
+        .market-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .market-card {
+
+            padding: 25px;
+
+            border-radius: 18px;
+
+            background: white;
+
+            border:
+                1px solid rgba(31, 93, 57, 0.08);
+
+            box-shadow:
+                0 12px 30px rgba(31, 93, 57, 0.06);
+
+            transition: 0.25s ease;
+
+        }
+
+
+        .market-card:hover {
+
+            transform: translateY(-5px);
+
+        }
+
+
+        .market-card h3 {
+
+            margin-top: 0;
+
+            color: #315c41;
+
+            font-size: 16px;
+
+        }
+
+
+        .market-card h2 {
+
+            margin: 14px 0 4px;
+
+            color: #1d5636;
+
+            font-size: 26px;
+
+        }
+
+
+        .market-card p {
+
+            color: #849087;
+
+            font-size: 12px;
+
+        }
+
+
+        .up {
+
+            color: #329152;
+
+            font-size: 12px;
+            font-weight: 700;
+
+        }
+
+
+        .down {
+
+            color: #d35a5a;
+
+            font-size: 12px;
+            font-weight: 700;
+
+        }
+
+
+        /* =========================
+           SMART FARMING TOOLS
+        ========================= */
+
+        .smart-tools-section {
+
+            padding: 85px 8%;
+
+            background: white;
+
+        }
+
+
+        .tools-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .tool-card {
+
+            position: relative;
+
+            display: block;
+
+            padding: 28px;
+
+            min-height: 210px;
+
+            border-radius: 20px;
+
+            text-decoration: none;
+
+            color: inherit;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #ffffff,
+                    #f5faf5
+                );
+
+            border:
+                1px solid rgba(31, 93, 57, 0.1);
+
+            transition: 0.3s ease;
+
+            overflow: hidden;
+
+        }
+
+
+        .tool-card::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 150px;
+            height: 150px;
+
+            right: -70px;
+            top: -70px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(77, 152, 96, 0.08);
+
+        }
+
+
+        .tool-card:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 22px 45px rgba(31, 93, 57, 0.12);
+
+            border-color:
+                rgba(47, 122, 66, 0.25);
+
+        }
+
+
+        .tool-icon {
+
+            position: relative;
+
+            width: 55px;
+            height: 55px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 16px;
+
+            background: #eaf6ec;
+
+            font-size: 26px;
+
+        }
+
+
+        .tool-card h3 {
+
+            position: relative;
+
+            margin: 22px 0 10px;
+
+            color: #234b33;
+
+            font-size: 20px;
+
+        }
+
+
+        .tool-card p {
+
+            position: relative;
+
+            margin: 0;
+
+            color: #708078;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+
+        }
+
+
+        .tool-arrow {
+
+            position: relative;
+
+            display: block;
+
+            margin-top: 22px;
+
+            color: #2b7a45;
+
+            font-size: 20px;
+
+        }
+
+
+        /* =========================
+           LOCATION & WEATHER
+        ========================= */
+
+        .farm-intelligence-section {
+
+            padding: 90px 8%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #1e5938,
+                    #367a4a
+                );
+
+        }
+
+
+        .farm-intelligence-section .section-title p {
+
+            color: #b9dfc2;
+
+        }
+
+
+        .farm-intelligence-section .section-title h2 {
+
+            color: white;
+
+        }
+
+
+        .intelligence-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1.2fr 0.8fr;
+
+            gap: 25px;
+
+        }
+
+
+        .location-card {
+
+            padding: 45px;
+
+            border-radius: 25px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255, 255, 255, 0.14),
+                    rgba(255, 255, 255, 0.06)
+                );
+
+            border:
+                1px solid rgba(255, 255, 255, 0.16);
+
+            color: white;
+
+        }
+
+
+        .location-card h3 {
+
+            margin: 18px 0 10px;
+
+            font-size: 28px;
+
+        }
+
+
+        .location-card p {
+
+            color: #d9eddd;
+
+            line-height: 1.7;
+
+        }
+
+
+        .location-card a {
+
+            display: inline-block;
+
+            margin-top: 18px;
+
+            padding: 13px 20px;
+
+            border-radius: 10px;
+
+            background: white;
+
+            color: #245c3a;
+
+            text-decoration: none;
+
+            font-size: 14px;
+            font-weight: 700;
+
+        }
+
+
+        .weather-card {
+
+            padding: 35px;
+
+            border-radius: 25px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #f6cb66,
+                    #f5a94e
+                );
+
+            color: #3d3217;
+
+        }
+
+
+        .weather-icon {
+
+            font-size: 70px;
+
+        }
+
+
+        .weather-card h3 {
+
+            margin: 15px 0 5px;
+
+            font-size: 40px;
+
+        }
+
+
+        .weather-card p {
+
+            margin: 0;
+
+            font-size: 15px;
+
+        }
+
+
+        .weather-card a {
+
+            display: inline-block;
+
+            margin-top: 25px;
+
+            color: #46391c;
+
+            font-weight: 800;
+
+            text-decoration: none;
+
+        }
+
+
+        /* =========================
+           FARMING TIPS
+        ========================= */
+
+        .farming-tips {
+
+            padding: 85px 8%;
+
+            background: #f7faf6;
+
+        }
+
+
+        .tips-container {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 22px;
+
+        }
+
+
+        .tip-card {
+
+            padding: 32px;
+
+            border-radius: 20px;
+
+            background: white;
+
+            border:
+                1px solid rgba(31, 93, 57, 0.08);
+
+            box-shadow:
+                0 10px 25px rgba(31, 93, 57, 0.05);
+
+        }
+
+
+        .tip-icon {
+
+            font-size: 36px;
+
+        }
+
+
+        .tip-card h3 {
+
+            margin: 18px 0 10px;
+
+            color: #254e35;
+
+        }
+
+
+        .tip-card p {
+
+            color: #738078;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            padding: 55px 8%;
+
+            text-align: center;
+
+            background: #173d29;
+
+            color: white;
+
+        }
+
+
+        footer h3 {
+
+            margin: 0 0 10px;
+
+            font-size: 25px;
+
+        }
+
+
+        footer p {
+
+            margin: 0;
+
+            color: #bcd3c2;
+
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 1100px) {
+
+            .farmer-glance-grid,
+            .market-grid,
+            .tools-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+
+
+            .nav-links {
+
+                gap: 0;
+
+            }
+
+
+            .nav-links a {
+
+                padding: 8px;
+
+                font-size: 12px;
+
+            }
+
+        }
+
+
+        @media (max-width: 850px) {
+
+            .navbar {
+
+                flex-wrap: wrap;
+
+                gap: 12px;
+
+            }
+
+
+            .nav-links {
+
+                order: 3;
+
+                width: 100%;
+
+                justify-content: center;
+
+                flex-wrap: wrap;
+
+            }
+
+
+            .hero {
+
+                flex-direction: column;
+
+                text-align: center;
+
+                padding: 70px 8%;
+
+            }
+
+
+            .hero-content > p:not(.small-title) {
+
+                margin-left: auto;
+                margin-right: auto;
+
+            }
+
+
+            .intelligence-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .farmer-glance-grid,
+            .market-grid,
+            .tools-grid,
+            .tips-container {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .hero-image {
+
+                width: 180px;
+                height: 180px;
+
+                font-size: 80px;
+
+            }
+
+
+            .section-title h2 {
+
+                font-size: 27px;
+
+            }
+
+
+            .location-card {
+
+                padding: 30px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav class="navbar">
+
+
+        <div class="logo">
+
+            🌾 KrishiSetu
+
+        </div>
+
+
+
+        <ul class="nav-links">
+
+
+            <li>
+
+                <a href="index.html">
+
+                    🏠 Home
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="#dashboard">
+
+                    📊 Dashboard
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="#market">
+
+                    📈 Market
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="schemes.html">
+
+                    🏛️ Government Schemes
+
+                </a>
+
+            </li>
+
+
+        </ul>
+
+
+
+        <!-- MORE TOOLS -->
+
+        <div class="tools-menu">
+
+
+            <button
+                class="tools-btn"
+                id="toolsBtn"
+            >
+
+                ✦ More Tools
+
+            </button>
+
+
+
+            <div
+                class="tools-dropdown"
+                id="toolsDropdown"
+            >
+
+
+                <a href="fertilizer.html">
+
+                    🧪 Fertilizer Calculator
+
+                </a>
+
+
+                <a href="crop-recommendation.html">
+
+                    🌱 Crop & Fruit Recommendation
+
+                </a>
+
+
+                <a href="irrigation-adviser.html">
+
+                    💧 Irrigation Adviser
+
+                </a>
+
+
+                <a href="location-weather.html">
+
+                    📍 Location & Weather
+
+                </a>
+
+                <div class="more-tools-menu">
+    <a href="fertilizer-information.html">
+    🌱 Fertilizer Information
+</a>
+
+   <a href="farming-tools.html" class="farming-tools-btn">
+    🚜 Farming Tools Information
+</a>
+</div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- DARK MODE -->
+
+        <button id="darkModeBtn">
+
+            🌙
+
+        </button>
+
+
+
+        <!-- USER MENU -->
+
+        <div
+            class="user-menu"
+            id="userMenu"
+        >
+
+
+            <a
+                href="login.html"
+                class="login-nav-btn"
+                id="loginNavBtn"
+            >
+
+                Login
+
+            </a>
+
+
+
+            <div
+                class="dropdown-menu"
+                id="dropdownMenu"
+            >
+
+
+                <div class="user-name">
+
+                    👨‍🌾
+                    <span id="dropdownFarmerName"></span>
+
+                </div>
+
+
+
+                <a href="#dashboard">
+
+                    📊 My Dashboard
+
+                </a>
+
+
+
+                <button id="logoutBtn">
+
+                    🚪 Logout
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+    </nav>
+
+
+
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
+
+    <section
+        id="home"
+        class="hero"
+    >
+
+
+        <div class="hero-content">
+
+
+            <p class="small-title">
+
+                SMART AGRICULTURE PLATFORM
+
+            </p>
+
+
+
+            <h1>
+
+                Better Decisions
+                <span>
+                    For Better Farming
+                </span>
+
+            </h1>
+
+
+
+            <p>
+
+                KrishiSetu brings smart farming tools,
+                crop guidance, market information and
+                government schemes together in one place.
+
+            </p>
+
+
+
+            <button
+                class="explore-btn"
+                onclick="scrollToDashboard()"
+            >
+
+                Explore Your Farm Dashboard →
+
+            </button>
+
+
+        </div>
+
+
+
+        <div class="hero-image">
+
+            🌾
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         DASHBOARD
+    ========================== -->
+
+    <section
+        id="dashboard"
+        class="section farmer-glance-section"
+    >
+
+
+        <div class="section-title">
+
+            <p>
+
+                FARMER DASHBOARD
+
+            </p>
+
+
+            <h2>
+
+                Your Farm at a Glance
+
+            </h2>
+
+        </div>
+
+
+
+        <div class="farmer-glance-grid">
+
+
+            <div class="farmer-glance-card">
+
+                <div class="glance-icon">
+
+                    🌦️
+
+                </div>
+
+
+                <p class="glance-label">
+
+                    Weather
+
+                </p>
+
+
+                <h3>
+
+                    28°C
+
+                </h3>
+
+
+                <span>
+
+                    Partly Cloudy
+
+                </span>
+
+            </div>
+
+
+
+            <div class="farmer-glance-card">
+
+                <div class="glance-icon">
+
+                    🌱
+
+                </div>
+
+
+                <p class="glance-label">
+
+                    Recommended Crop
+
+                </p>
+
+
+                <h3>
+
+                    Soybean
+
+                </h3>
+
+
+                <span>
+
+                    Kharif Season
+
+                </span>
+
+            </div>
+
+
+
+            <div class="farmer-glance-card">
+
+                <div class="glance-icon">
+
+                    💰
+
+                </div>
+
+
+                <p class="glance-label">
+
+                    Top Market Price
+
+                </p>
+
+
+                <h3>
+
+                    ₹4,850
+
+                </h3>
+
+
+                <span>
+
+                    Soybean / Quintal
+
+                </span>
+
+            </div>
+
+
+
+            <div class="farmer-glance-card">
+
+                <div class="glance-icon">
+
+                    📢
+
+                </div>
+
+
+                <p class="glance-label">
+
+                    Important Update
+
+                </p>
+
+
+                <h3>
+
+                    Market Open
+
+                </h3>
+
+
+                <span>
+
+                    Latest information available
+
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         MARKET SECTION
+    ========================== -->
+
+    <section
+        id="market"
+        class="section market-section"
+    >
+
+
+        <div class="section-title">
+
+            <p>
+
+                MARKET INFORMATION
+
+            </p>
+
+
+            <h2>
+
+                Today's Crop Prices
+
+            </h2>
+
+        </div>
+
+
+
+        <div class="market-grid">
+
+
+            <div class="market-card">
+
+                <h3>
+
+                    🌱 Soybean
+
+                </h3>
+
+
+                <h2>
+
+                    ₹4,850
+
+                </h2>
+
+
+                <p>
+
+                    Per Quintal
+
+                </p>
+
+
+                <span class="up">
+
+                    ▲ 4.5%
+
+                </span>
+
+            </div>
+
+
+
+            <div class="market-card">
+
+                <h3>
+
+                    🥒 Cucumber
+
+                </h3>
+
+
+                <h2>
+
+                    ₹2,200
+
+                </h2>
+
+
+                <p>
+
+                    Per Quintal
+
+                </p>
+
+
+                <span class="down">
+
+                    ▼ 2.1%
+
+                </span>
+
+            </div>
+
+
+
+            <div class="market-card">
+
+                <h3>
+
+                    🌾 Wheat
+
+                </h3>
+
+
+                <h2>
+
+                    ₹2,650
+
+                </h2>
+
+
+                <p>
+
+                    Per Quintal
+
+                </p>
+
+
+                <span class="up">
+
+                    ▲ 3.2%
+
+                </span>
+
+            </div>
+
+
+
+            <div class="market-card">
+
+                <h3>
+
+                    🍅 Tomato
+
+                </h3>
+
+
+                <h2>
+
+                    ₹3,200
+
+                </h2>
+
+
+                <p>
+
+                    Per Quintal
+
+                </p>
+
+
+                <span class="up">
+
+                    ▲ 6.5%
+
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         SMART TOOLS
+    ========================== -->
+
+    <section class="smart-tools-section">
+
+
+        <div class="section-title">
+
+            <p>
+
+                KRISHISETU TOOLS
+
+            </p>
+
+
+            <h2>
+
+                Smart Tools for Every Farmer
+
+            </h2>
+
+        </div>
+
+
+
+        <div class="tools-grid">
+
+
+            <a
+                href="fertilizer.html"
+                class="tool-card"
+            >
+
+                <div class="tool-icon">
+
+                    🧪
+
+                </div>
+
+
+                <h3>
+
+                    Fertilizer Calculator
+
+                </h3>
+
+
+                <p>
+
+                    Get estimated fertilizer requirements
+                    based on your crop and farm area.
+
+                </p>
+
+
+                <span class="tool-arrow">
+
+                    →
+
+                </span>
+
+            </a>
+
+
+
+            <a
+                href="crop-recommendation.html"
+                class="tool-card"
+            >
+
+                <div class="tool-icon">
+
+                    🌱
+
+                </div>
+
+
+                <h3>
+
+                    Crop Recommendation
+
+                </h3>
+
+
+                <p>
+
+                    Find suitable crops, fruits and vegetables
+                    for your farming conditions.
+
+                </p>
+
+
+                <span class="tool-arrow">
+
+                    →
+
+                </span>
+
+            </a>
+
+
+
+            <a
+                href="irrigation-adviser.html"
+                class="tool-card"
+            >
+
+                <div class="tool-icon">
+
+                    💧
+
+                </div>
+
+
+                <h3>
+
+                    Irrigation Adviser
+
+                </h3>
+
+
+                <p>
+
+                    Get helpful water management
+                    recommendations for your crops.
+
+                </p>
+
+
+                <span class="tool-arrow">
+
+                    →
+
+                </span>
+
+            </a>
+
+
+
+            <a
+                href="schemes.html"
+                class="tool-card"
+            >
+
+                <div class="tool-icon">
+
+                    🏛️
+
+                </div>
+
+
+                <h3>
+
+                    Government Schemes
+
+                </h3>
+
+
+                <p>
+
+                    Explore farmer schemes, eligibility,
+                    benefits and official application links.
+
+                </p>
+
+
+                <span class="tool-arrow">
+
+                    →
+
+                </span>
+
+            </a>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         LOCATION & WEATHER
+    ========================== -->
+
+    <section class="farm-intelligence-section">
+
+
+        <div class="section-title">
+
+            <p>
+
+                FARM INTELLIGENCE
+
+            </p>
+
+
+            <h2>
+
+                Know Your Farm Better
+
+            </h2>
+
+        </div>
+
+
+
+        <div class="intelligence-grid">
+
+
+            <!-- LOCATION -->
+
+            <div class="location-card">
+
+
+                <div style="font-size: 45px;">
+
+                    📍
+
+                </div>
+
+
+                <h3>
+
+                    Where is Your Farm?
+
+                </h3>
+
+
+                <p>
+
+                    Save your farm location and use it
+                    to access location-based farming
+                    information in one convenient place.
+
+                </p>
+
+
+                <a href="location-weather.html">
+
+                    Set Farm Location →
+
+                </a>
+
+
+            </div>
+
+
+
+            <!-- WEATHER -->
+
+            <div class="weather-card">
+
+
+                <div class="weather-icon">
+
+                    ☀️
+
+                </div>
+
+
+                <p>
+
+                    FARM WEATHER
+
+                </p>
+
+
+                <h3>
+
+                    28°C
+
+                </h3>
+
+
+                <p>
+
+                    Sunny & suitable for farming
+
+                </p>
+
+
+                <a href="location-weather.html">
+
+                    View Weather →
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         FARMING TIPS
+    ========================== -->
+
+    <section class="farming-tips">
+
+
+        <div class="section-title">
+
+            <p>
+
+                FARMING KNOWLEDGE
+
+            </p>
+
+
+            <h2>
+
+                Quick Farming Tips
+
+            </h2>
+
+        </div>
+
+
+
+        <div class="tips-container">
+
+
+            <div class="tip-card">
+
+                <div class="tip-icon">
+
+                    🌱
+
+                </div>
+
+
+                <h3>
+
+                    Crop Care
+
+                </h3>
+
+
+                <p>
+
+                    Use fertilizer according to
+                    your crop requirements and soil condition.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="tip-card">
+
+                <div class="tip-icon">
+
+                    💧
+
+                </div>
+
+
+                <h3>
+
+                    Water Management
+
+                </h3>
+
+
+                <p>
+
+                    Avoid over-irrigation and check
+                    soil moisture regularly.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="tip-card">
+
+                <div class="tip-icon">
+
+                    🐛
+
+                </div>
+
+
+                <h3>
+
+                    Pest Control
+
+                </h3>
+
+
+                <p>
+
+                    Regularly inspect your crops
+                    for pests and diseases.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+
+        <h3>
+
+            🌾 KrishiSetu
+
+        </h3>
+
+
+        <p>
+
+            Connecting farmers with smarter decisions
+            and better farming tools.
+
+        </p>
+
+
+    </footer>
+
+
+
+    <!-- Existing JavaScript -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
